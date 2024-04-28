@@ -25,7 +25,7 @@ Namespace ViewModels
                 'UserId login saved
                 Database.userId = dr(0).ToString()
 
-                Model.userId = dr(0).ToString()
+                Model.Id = dr(0).ToString()
                 Model.Username = dr(1).ToString()
                 Model.Password = dr(2).ToString()
                 Model.Status = dr(3).ToString()

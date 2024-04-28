@@ -5,18 +5,18 @@ Namespace Models
 
     Public Class User
 
-        Private Id As String
+        Private userId As String
         Private name As String
         Private pass As String
         Private role As String
 
 
-        Public Property userId As String
+        Public Property Id As String
             Get
-                Return Id
+                Return userId
             End Get
             Set(ByVal value As String)
-                Id = value
+                userId = value
             End Set
         End Property
 
