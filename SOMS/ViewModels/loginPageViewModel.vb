@@ -1,38 +1,38 @@
-﻿Imports System.Data
-Imports System.Data.OleDb
-Imports System.Text.RegularExpressions
+﻿Imports System.Data.OleDb
 Imports SOMS.Models
 
 Namespace ViewModels
 
     Public Class loginPageViewModel
-        Public Model As User
-        Public database As New Database
-
+        Public Model As New User
+        'UC012
         Function getUserByDetailFromModel(username As String, password As String) As String
-            Dim sdr As OleDbDataReader
-            Dim SQL As String = "SELECT * from [User] WHERE Username = '" & username & "' AND Password = '" & password & "' "
-            Dim returnUserLoginStatus As String
-            Dim connection As New OleDbConnection(database.dbProvider)
+            'Flag for always failed login until right credentials
+            Dim returnUserLoginStatus As String = "Failed"
+            Dim dr As OleDbDataReader
+            Dim sql As String = "SELECT * from [User] WHERE Username = @username AND Password = @password"
+            Dim con As New OleDbConnection(Database.dbProvider)
 
-            Dim oleCommand = New OleDbCommand(SQL, connection)
-            connection.Open()
-            sdr = oleCommand.ExecuteReader
-
-            If (sdr.Read() = True) Then
+            con.Open()
+            'Parameterized Query
+            Dim com As New OleDbCommand(sql, con)
+            com.Parameters.AddWithValue("@username", username)
+            com.Parameters.AddWithValue("@password", password)
+            'Execute Read Query
+            dr = com.ExecuteReader()
+            While dr.Read
                 MessageBox.Show("Login Successfully!")
-                'MessageBox.Show(sdr.GetString(0))
+                'UserId login saved
+                Database.userId = dr(0).ToString()
 
-                'Model.Id = sdr.GetString(0).ToString()
-                'Model.Name = sdr.GetString(1).ToString()
-                'Model.Code = sdr.GetString(2).ToString()
-                'Model.Type = sdr.GetString(3).ToString()
+                Model.userId = dr(0).ToString()
+                Model.Username = dr(1).ToString()
+                Model.Password = dr(2).ToString()
+                Model.Status = dr(3).ToString()
                 returnUserLoginStatus = "admin"
-            Else
-                MessageBox.Show("Invalid username or password!")
-                returnUserLoginStatus = "Failed"
-            End If
-            connection.Close()
+            End While
+            'Return Flag Value
+            con.Close()
             Return returnUserLoginStatus
         End Function
     End Class

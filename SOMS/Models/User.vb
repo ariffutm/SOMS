@@ -5,45 +5,45 @@ Namespace Models
 
     Public Class User
 
-        Private userId As String
-        Private Username As String
-        Private Password As String
-        Private Status As String
+        Private Id As String
+        Private name As String
+        Private pass As String
+        Private role As String
 
 
-        Public Property Id As String
+        Public Property userId As String
             Get
-                Return userId
+                Return Id
             End Get
             Set(ByVal value As String)
-                userId = value
+                Id = value
             End Set
         End Property
 
-        Public Property Name As String
+        Public Property Username As String
             Get
-                Return Username
+                Return name
             End Get
             Set(ByVal value As String)
-                Username = value
+                name = value
             End Set
         End Property
 
-        Public Property Code As String
+        Public Property Password As String
             Get
-                Return Password
+                Return pass
             End Get
             Set(ByVal value As String)
-                Password = value
+                pass = value
             End Set
         End Property
 
-        Public Property Type As String
+        Public Property Status As String
             Get
-                Return Status
+                Return role
             End Get
             Set(ByVal value As String)
-                Status = value
+                role = value
             End Set
         End Property
 
