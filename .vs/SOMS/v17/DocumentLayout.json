@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\views\\profilepageview.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\views\\profilepageview.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\viewmodels\\loginpageviewmodel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\viewmodels\\loginpageviewmodel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
@@ -26,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "User.vb",
               "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Models\\User.vb",
               "RelativeDocumentMoniker": "SOMS\\Models\\User.vb",
@@ -43,7 +47,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "loginPageView.xaml.vb",
               "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\loginPageView.xaml.vb",
               "RelativeDocumentMoniker": "SOMS\\Views\\loginPageView.xaml.vb",
@@ -56,7 +60,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "profilePageView.xaml.vb",
+              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\profilePageView.xaml.vb",
+              "RelativeDocumentMoniker": "SOMS\\Views\\profilePageView.xaml.vb",
+              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\profilePageView.xaml.vb",
+              "RelativeToolTip": "SOMS\\Views\\profilePageView.xaml.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-28T19:26:18.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Database.vb",
               "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Models\\Database.vb",
               "RelativeDocumentMoniker": "SOMS\\Models\\Database.vb",
@@ -68,13 +85,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "loginPageViewModel.vb",
               "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\ViewModels\\loginPageViewModel.vb",
               "RelativeDocumentMoniker": "SOMS\\ViewModels\\loginPageViewModel.vb",
               "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\ViewModels\\loginPageViewModel.vb",
               "RelativeToolTip": "SOMS\\ViewModels\\loginPageViewModel.vb",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB0AAAA4AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-04-28T03:26:21.671Z",
               "EditorCaption": ""
