@@ -16,7 +16,11 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("SOMS"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
+<<<<<<< Updated upstream
  Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0"),  _
+=======
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e91bd1ebbe527baa22f30840a58e2c1c1ad60eed"),  _
+>>>>>>> Stashed changes
  Assembly: System.Reflection.AssemblyProductAttribute("SOMS"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("SOMS"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

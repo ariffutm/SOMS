@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\viewmodels\\loginpageviewmodel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\viewmodels\\loginpageviewmodel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\views\\loginpageview.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\views\\loginpageview.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\models\\user.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\models\\user.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\models\\database.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\models\\database.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.vb",
+              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Models\\User.vb",
+              "RelativeDocumentMoniker": "SOMS\\Models\\User.vb",
+              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Models\\User.vb",
+              "RelativeToolTip": "SOMS\\Models\\User.vb",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAiwDEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-02T18:34:44.012Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "loginPageView.xaml.vb",
+              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\loginPageView.xaml.vb",
+              "RelativeDocumentMoniker": "SOMS\\Views\\loginPageView.xaml.vb",
+              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\loginPageView.xaml.vb",
+              "RelativeToolTip": "SOMS\\Views\\loginPageView.xaml.vb",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-28T03:33:53.663Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Database.vb",
+              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Models\\Database.vb",
+              "RelativeDocumentMoniker": "SOMS\\Models\\Database.vb",
+              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Models\\Database.vb",
+              "RelativeToolTip": "SOMS\\Models\\Database.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-28T04:50:47.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "loginPageViewModel.vb",
+              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\ViewModels\\loginPageViewModel.vb",
+              "RelativeDocumentMoniker": "SOMS\\ViewModels\\loginPageViewModel.vb",
+              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\ViewModels\\loginPageViewModel.vb",
+              "RelativeToolTip": "SOMS\\ViewModels\\loginPageViewModel.vb",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB0AAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-28T03:26:21.671Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
