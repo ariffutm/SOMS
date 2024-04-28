@@ -1,4 +1,3 @@
-C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\SOMS.vbproj.AssemblyReference.cache
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\MainWindow.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\loginPageView.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Application.g.vb
@@ -25,3 +24,12 @@ C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\profilePag
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\userPageView.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\profilePageView.baml
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\userPageView.baml
+C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\SOMS.sourcelink.json
+C:\Users\VICTUS\source\repos\SOMS\SOMS\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\VICTUS\source\repos\SOMS\SOMS\bin\Debug\net6.0-windows\System.Data.OleDb.dll
+C:\Users\VICTUS\source\repos\SOMS\SOMS\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\VICTUS\source\repos\SOMS\SOMS\bin\Debug\net6.0-windows\System.Security.Cryptography.ProtectedData.dll
+C:\Users\VICTUS\source\repos\SOMS\SOMS\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Data.OleDb.dll
+C:\Users\VICTUS\source\repos\SOMS\SOMS\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\SOMS.vbproj.AssemblyReference.cache
+C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\SOMS.vbproj.Up2Date

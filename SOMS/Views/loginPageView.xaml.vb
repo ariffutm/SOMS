@@ -3,15 +3,16 @@ Imports SOMS.ViewModels
 
 Public Class loginPageView
     Private Sub LoginButton_Click(sender As Object, e As RoutedEventArgs)
-        Dim login = New loginPageViewModel
+        Dim viewModel = New loginPageViewModel
         Dim loginStatus As String
 
-        loginStatus = login.getUserByDetailFromModel(textBoxEmail.Text, passwordBox1.Password)
-        If loginStatus = "Admin" Then
+        loginStatus = viewModel.getUserByDetailFromModel(textBoxEmail.Text, passwordBox1.Password)
+
+        If loginStatus = "admin" Then
             Dim dashboardAdmin As MainWindow = New MainWindow()
             Me.Close()
             dashboardAdmin.Show()
-        ElseIf loginStatus = "User" Then
+        ElseIf loginStatus = "user" Then
             Dim dashboardUser As MainWindow = New MainWindow()
             Me.Close()
             dashboardUser.Show()

@@ -6,22 +6,16 @@ Namespace ViewModels
         Function getAllUserListFromModel() As ObservableCollection(Of User)
             Dim userList = New ObservableCollection(Of User) From {
                 New User() With {
-                .Id = "Directory1",
-                .Name = "Directory1",
-                .Code = "Info1",
-                .Type = "Directory1"
+                .Id = "1",
+                .Name = "admin",
+                .Code = "admin",
+                .Type = "admin"
                 },
                         New User() With {
-                .Id = "Directory2",
-                .Name = "Directory2",
-                .Code = "Info2",
-                .Type = "Directory2"
-                 },
-                        New User() With {
-                .Id = "Directory2",
-                .Name = "Info3",
-                .Code = "Info3",
-                .Type = "Info3"
+                .Id = "2",
+                .Name = "user",
+                .Code = "user",
+                .Type = "user"
                  }
             }
             Return userList

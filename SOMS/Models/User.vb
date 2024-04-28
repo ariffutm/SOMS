@@ -1,8 +1,10 @@
 ﻿Imports System.ComponentModel
+Imports System.Data.OleDb
 
 Namespace Models
 
     Public Class User
+
         Private userId As String
         Private Username As String
         Private Password As String
@@ -44,6 +46,8 @@ Namespace Models
                 Status = value
             End Set
         End Property
+
+
     End Class
 
 End Namespace
