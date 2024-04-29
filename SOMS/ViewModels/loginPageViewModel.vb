@@ -10,7 +10,7 @@ Namespace ViewModels
             'Flag for always failed login until right credentials
             Dim returnUserLoginStatus As String = "Failed"
             Dim dr As OleDbDataReader
-            Dim sql As String = "SELECT * from [User] WHERE Username = @username AND Password = @password"
+            Dim sql As String = "SELECT * from [User] WHERE Username = ? AND Password = ?"
             Dim con As New OleDbConnection(Database.dbProvider)
 
             con.Open()

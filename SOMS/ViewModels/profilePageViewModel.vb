@@ -6,37 +6,38 @@ Imports SOMS.Models
 Public Class ProfilePageViewModel
     Public Model As New User
 
-    Function UpdateUserByIDIntoModel(Username As String, currentPass As String, newPass As String) As Boolean
-        ''Dim sql As String = "UPDATE [User] SET Username = @name, Password = @pass WHERE [userId] = @id"
+    Function UpdateUserByIDIntoModel(Username As String, oldPass As String, newPass As String) As Boolean
         Dim data As OleDbDataReader
         Dim con As New OleDbConnection(Database.dbProvider)
 
-        con.Open()
-        Dim sql As String = "SELECT * from [User] WHERE Id = @id"
+        Dim sql As String = "Select * From [User] Where Id = ?"
         Dim com As New OleDbCommand(sql, con)
-        com.Parameters.AddWithValue("@id", "1")
+        con.Open()
+        com.Parameters.AddWithValue("@userId", Database.userId)
 
         'Exceute reader, then load into table for update validation
         data = com.ExecuteReader()
-        ''Dim dt As New DataTable()
-        ''dt.Load(data)
-        'MessageBox.Show(dt.Rows(1)(1))
+        Dim dt As New DataTable()
+        dt.Load(data)
 
+        'Check the text box filled, old password requirement.
+        If String.IsNullOrWhiteSpace(Username) Or String.IsNullOrWhiteSpace(oldPass) Or String.IsNullOrEmpty(newPass) Then
+            MessageBox.Show("Please fill out all text boxes.")
+        ElseIf oldPass <> dt.Rows(0)(2).ToString Then
+            MessageBox.Show("Wrong old password.")
+        ElseIf newPass = dt.Rows(0)(2) Then
+            MessageBox.Show("Please change to a different password than the current one.")
+        Else
+            sql = "UPDATE [User] Set Username = ?, [Password] = ? WHERE Id = ?"
+            com = New OleDbCommand(sql, con)
+            com.Parameters.AddWithValue("@username", Username)
+            com.Parameters.AddWithValue("@password", newPass)
+            com.Parameters.AddWithValue("@userid", Integer.Parse(Database.userId))
+            com.ExecuteNonQuery()
+            con.Close()
+            Return True
+        End If
         con.Close()
-        ''Check the text box filled, old password requirement.
-        'If String.IsNullOrWhiteSpace(Username) AndAlso String.IsNullOrWhiteSpace(newPass) Then
-        '    MessageBox.Show("Please fill out all text boxes.")
-        '    Return False
-        'ElseIf currentPass IsNot dt.Rows(1)(3) Then
-        '    MessageBox.Show("Wrong current password.")
-        '    Return False
-        'ElseIf newPass Is dt.Rows(1)(3) Then
-        '    MessageBox.Show("Please change to a different password than the current one.")
-        '    Return False
-        'Else
-        '    sql = "SELECT * from [User] WHERE userId = @id"
-
-        'End If
         Return False
     End Function
 
