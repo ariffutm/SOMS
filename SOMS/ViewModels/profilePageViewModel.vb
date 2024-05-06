@@ -1,5 +1,4 @@
 ﻿Imports System.Data
-Imports System.Data.Common
 Imports System.Data.OleDb
 Imports SOMS.Models
 
@@ -35,6 +34,7 @@ Public Class ProfilePageViewModel
             com.Parameters.AddWithValue("@userid", Integer.Parse(Database.userId))
             com.ExecuteNonQuery()
             con.Close()
+            MessageBox.Show("Update successful.")
             Return True
         End If
         con.Close()

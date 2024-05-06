@@ -1,4 +1,5 @@
-﻿Imports System.ComponentModel
+﻿Imports System.Collections.ObjectModel
+Imports System.ComponentModel
 Imports System.Data.OleDb
 
 Namespace Models
@@ -46,6 +47,17 @@ Namespace Models
                 role = value
             End Set
         End Property
+
+        'Private _userList As ObservableCollection(Of User)
+
+        'Public Property UserList As ObservableCollection(Of User)
+        '    Get
+        '        Return _userList
+        '    End Get
+        '    Set(ByVal value As ObservableCollection(Of User))
+        '        _userList = value
+        '    End Set
+        'End Property
 
     End Class
 

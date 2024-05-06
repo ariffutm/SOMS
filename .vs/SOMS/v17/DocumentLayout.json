@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\views\\userpageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\views\\userpageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\application.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\application.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\viewmodels\\profilepageviewmodel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\viewmodels\\profilepageviewmodel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\views\\profilepageview.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\views\\profilepageview.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\views\\profilepageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\views\\profilepageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\models\\user.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\models\\user.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,79 +14,18 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "User.vb",
-              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Models\\User.vb",
-              "RelativeDocumentMoniker": "SOMS\\Models\\User.vb",
-              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Models\\User.vb",
-              "RelativeToolTip": "SOMS\\Models\\User.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-04-28T18:29:58.715Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Application.xaml",
-              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Application.xaml",
-              "RelativeDocumentMoniker": "SOMS\\Application.xaml",
-              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Application.xaml",
-              "RelativeToolTip": "SOMS\\Application.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T03:01:53.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "userPageView.xaml",
-              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\userPageView.xaml",
-              "RelativeDocumentMoniker": "SOMS\\Views\\userPageView.xaml",
-              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\userPageView.xaml",
-              "RelativeToolTip": "SOMS\\Views\\userPageView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T02:54:47.254Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "profilePageView.xaml",
               "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\profilePageView.xaml",
               "RelativeDocumentMoniker": "SOMS\\Views\\profilePageView.xaml",
               "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\profilePageView.xaml",
               "RelativeToolTip": "SOMS\\Views\\profilePageView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-29T12:22:39.722Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "profilePageView.xaml.vb",
-              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\profilePageView.xaml.vb",
-              "RelativeDocumentMoniker": "SOMS\\Views\\profilePageView.xaml.vb",
-              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\profilePageView.xaml.vb",
-              "RelativeToolTip": "SOMS\\Views\\profilePageView.xaml.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-04-28T17:31:49.834Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "profilePageViewModel.vb",
-              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\ViewModels\\profilePageViewModel.vb",
-              "RelativeDocumentMoniker": "SOMS\\ViewModels\\profilePageViewModel.vb",
-              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\ViewModels\\profilePageViewModel.vb",
-              "RelativeToolTip": "SOMS\\ViewModels\\profilePageViewModel.vb",
-              "ViewState": "AQIAABYAAAAAAAAAAAAqwB8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-04-28T17:31:47.854Z",
+              "WhenOpened": "2024-05-06T08:08:13.778Z",
               "EditorCaption": ""
             }
           ]

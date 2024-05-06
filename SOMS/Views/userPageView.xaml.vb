@@ -3,19 +3,22 @@ Imports SOMS.Models
 Imports SOMS.ViewModels
 
 Partial Public Class userPageView
-    Public Property userList = New ObservableCollection(Of User)
 
     Public Sub New()
         InitializeComponent()
 
-        userList = seeAllUserList()
-        Me.DataContext = Me
+        Me.DataContext = seeAllUserList()
     End Sub
 
-    Private Function seeAllUserList() As ObservableCollection(Of User)
-        Dim getUserList = New userPageViewModel
+    'UC013 Add
+    Private Sub ButtonAdd_Click(sender As Object, e As RoutedEventArgs) Handles ButtonAdd.Click
 
-        userList = getUserList.getAllUserListFromModel
-        Return userList
+    End Sub
+
+    'UC013 Read
+    Private Function seeAllUserList() As userPageViewModel
+        Dim viewModel = New userPageViewModel
+        viewModel.getAllUserListFromModel()
+        Return viewModel
     End Function
 End Class
