@@ -4,11 +4,10 @@ Imports SOMS.Models
 
 Public Class ProfilePageViewModel
     Public Model As New User
+    Dim con As New OleDbConnection(Database.dbProvider)
+    Dim data As OleDbDataReader
 
-    Function UpdateUserByIDIntoModel(Username As String, oldPass As String, newPass As String) As Boolean
-        Dim data As OleDbDataReader
-        Dim con As New OleDbConnection(Database.dbProvider)
-
+    Public Sub UpdateUserByIDIntoModel(Username As String, oldPass As String, newPass As String)
         Dim sql As String = "Select * From [User] Where Id = ?"
         Dim com As New OleDbCommand(sql, con)
         con.Open()
@@ -35,10 +34,7 @@ Public Class ProfilePageViewModel
             com.ExecuteNonQuery()
             con.Close()
             MessageBox.Show("Update successful.")
-            Return True
         End If
         con.Close()
-        Return False
-    End Function
-
+    End Sub
 End Class

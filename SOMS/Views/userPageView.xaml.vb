@@ -12,7 +12,10 @@ Partial Public Class userPageView
 
     'UC013 Add
     Private Sub ButtonAdd_Click(sender As Object, e As RoutedEventArgs) Handles ButtonAdd.Click
+        Dim viewModel = New userPageViewModel
 
+        viewModel.addUserToModel(TextBoxUsername.Text, TextBoxPassword.Text, TextBoxStatus.Text)
+        Me.DataContext = seeAllUserList()
     End Sub
 
     'UC013 Read

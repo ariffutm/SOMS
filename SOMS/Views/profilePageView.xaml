@@ -19,9 +19,9 @@
             <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,48,0,0" x:Name="textBlockPassword" VerticalAlignment="Top" Width="110"  ><Run Language="en-my" Text="Old "/><Run Text="Password:"/></TextBlock>
             <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,80,0,0" x:Name="textBlockConfirmPwd" VerticalAlignment="Top" Width="110" ><Run Language="en-my" Text="New "/><Run Text="Password:"/></TextBlock>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="183,20,0,0" Name="usernameBox" VerticalAlignment="Top" Width="222" />
-            <PasswordBox Height="23" HorizontalAlignment="Left" Margin="183,48,0,0" Name="currentPasswordBox" VerticalAlignment="Top" Width="222" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,48,0,0" Name="currentPasswordBox" VerticalAlignment="Top" Width="222" />
             <!--For password-->
-            <PasswordBox Height="23" HorizontalAlignment="Left" Margin="183,76,0,0" Name="newPasswordBox" VerticalAlignment="Top" Width="222" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,76,0,0" Name="newPasswordBox" VerticalAlignment="Top" Width="222" />
             <Button Content="Update" Height="23" HorizontalAlignment="Left" Margin="183,134,0,0" Name="SendProfileUpdated" VerticalAlignment="Top" Width="70" Click="SendProfileUpdated_Click" />
             <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="259,134,0,0" Name="cancelButton" VerticalAlignment="Top" Width="70" Click="cancelButton_Click" />
             <Button Content="Cancel" Height="23" HorizontalAlignment="Right" Margin="0,134,60,0" Name="button3" VerticalAlignment="Top" Width="70" Visibility="Hidden" />

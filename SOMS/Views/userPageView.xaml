@@ -22,19 +22,22 @@
                 <Label Content="Id" HorizontalAlignment="Left" 
                        VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="0"/>
                 <TextBlock Grid.Row="0" Grid.Column="1" x:Name="TextBoxId" Height="27" 
-                       Text="{Binding Path=StudentRecord.Name, Mode=TwoWay}"  Margin="5"  Width="300" HorizontalAlignment="Left"/>
+                         Margin="5"  Width="300" HorizontalAlignment="Left"/>
                 <Label Content="Username" HorizontalAlignment="Left" VerticalContentAlignment="Center" 
                        Grid.Row="1" Grid.Column="0"/>
-                <TextBox Grid.Row="1" Grid.Column="1" x:Name="TextBoxAge" Height="27" 
-                       Text="{Binding Path=StudentRecord.Age, Mode=TwoWay}" Margin="5,5,0,5" Width="300" HorizontalAlignment="Left"/>
+                <TextBox Grid.Row="1" Grid.Column="1" x:Name="TextBoxUsername" Height="27" 
+                       Margin="5,5,0,5" Width="300" HorizontalAlignment="Left"/>
                 <Label Content="Password" HorizontalAlignment="Left" VerticalContentAlignment="Center" 
                        Grid.Row="2" Grid.Column="0" />
-                <TextBox Grid.Row="2" Grid.Column="1" x:Name="TextBoxAddress" Height="27" 
-                       Text="{Binding Path=StudentRecord.Address, Mode=TwoWay}" Margin="5" Width="300" HorizontalAlignment="Left"/>
+                <TextBox Grid.Row="2" Grid.Column="1" x:Name="TextBoxPassword" Height="27" 
+                       Margin="5" Width="300" HorizontalAlignment="Left"/>
                 <Label Content="Status" HorizontalAlignment="Left" VerticalContentAlignment="Center" 
                        Grid.Row="3" Grid.Column="0" />
-                <TextBox Grid.Row="3" Grid.Column="1" x:Name="TextBoxContact" Height="27"
-                       Text="{Binding Path=StudentRecord.Contact, Mode=TwoWay}" Margin="5" Width="300" HorizontalAlignment="Left"/>
+                <ComboBox Grid.Row="3" Grid.Column="1" x:Name="TextBoxStatus" Height="27"
+                        Margin="5" Width="300" HorizontalAlignment="Left">
+                    <ComboBoxItem Content="Admin"></ComboBoxItem>
+                    <ComboBoxItem Content="User"></ComboBoxItem>
+                </ComboBox>
             </Grid>
         </GroupBox>
         <StackPanel Height="40" Orientation="Horizontal" HorizontalAlignment="Right">
