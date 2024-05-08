@@ -12,12 +12,10 @@ Public Class ProfilePageViewModel
         Dim com As New OleDbCommand(sql, con)
         con.Open()
         com.Parameters.AddWithValue("@userId", Database.userId)
-
         'Exceute reader, then load into table for update validation
         data = com.ExecuteReader()
         Dim dt As New DataTable()
         dt.Load(data)
-
         'Check the text box filled, old password requirement.
         If String.IsNullOrWhiteSpace(Username) Or String.IsNullOrWhiteSpace(oldPass) Or String.IsNullOrEmpty(newPass) Then
             MessageBox.Show("Please fill out all text boxes.")

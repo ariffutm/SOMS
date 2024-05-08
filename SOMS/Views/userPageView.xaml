@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SOMS"
         mc:Ignorable="d"
-        Title="userPageView" Height="450" Width="800">
+        Title="userPageView" Height="550" Width="800">
     <StackPanel Orientation="Vertical">
         <GroupBox Header="User Form" Margin="10">
             <Grid Height="150">
@@ -43,13 +43,12 @@
         <StackPanel Height="40" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button x:Name="ButtonAdd" Content="Add" Height="30" Width="80" 
              Margin="5,0,5,0"/>
-            <Button x:Name="ButtonSave" Content="Update" Height="30" Width="80"
-                  />
+            <Button x:Name="ButtonUpdate" Content="Update" Height="30" Width="80"/>
             <Button x:Name="ButtonCancel" Content="Cancel" Height="30" Width="80" 
                    Margin="5,0,10,0"/>
         </StackPanel>
         <StackPanel Height="210">
-            <DataGrid x:Name="DataGridStudents" AutoGenerateColumns="False"
+            <DataGrid VerticalScrollBarVisibility="Auto" x:Name="DataGridUser" AutoGenerateColumns="False"
                       ItemsSource="{Binding userList}" CanUserAddRows="False" Height="200" Margin="10">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"  Width="100"  IsReadOnly="True"/>
@@ -66,7 +65,7 @@
                     <DataGridTemplateColumn Width="50">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="Delete" x:Name="ButtonDelete"/>
+                                <Button  Click="RemoveUser" Content="Delete" x:Name="ButtonDelete"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
