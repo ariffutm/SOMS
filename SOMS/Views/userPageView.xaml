@@ -21,7 +21,7 @@
                 </Grid.ColumnDefinitions>
                 <Label Content="Id" HorizontalAlignment="Left" 
                        VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="0"/>
-                <TextBlock Grid.Row="0" Grid.Column="1" x:Name="TextBoxId" Height="27" 
+                <TextBlock Grid.Row="0" Grid.Column="1" x:Name="TextBlockId" Height="27" 
                          Margin="5"  Width="300" HorizontalAlignment="Left"/>
                 <Label Content="Username" HorizontalAlignment="Left" VerticalContentAlignment="Center" 
                        Grid.Row="1" Grid.Column="0"/>
@@ -58,7 +58,7 @@
                     <DataGridTemplateColumn Width="50">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="Select" x:Name="ButtonEdit"/>
+                                <Button Click="SelectUser" Content="Select" x:Name="ButtonEdit"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>

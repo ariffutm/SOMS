@@ -32,11 +32,15 @@ Partial Public Class userPageView
         Me.DataContext = seeAllUserList()
     End Sub
 
-    'UC013 Update
-    Private Sub ButtonUpdate_Click(sender As Object, e As RoutedEventArgs) Handles ButtonUpdate.Click
+    'UC013 Select userId First, then Update
+    Private Sub SelectUser(sender As Object, e As RoutedEventArgs)
         Dim user As User = DataGridUser.SelectedItem
-
-        viewModel.deleteUserFromModel(user)
+        TextBlockId.Text = user.Id
+    End Sub
+    Private Sub ButtonUpdate_Click(sender As Object, e As RoutedEventArgs) Handles ButtonUpdate.Click
+        If viewModel.updateUserToModel(TextBlockId.Text, TextBoxUsername.Text, TextBoxPassword.Text, TextBoxStatus.Text) = True Then
+            TextBlockId.Text = ""
+        End If
         Me.DataContext = seeAllUserList()
     End Sub
 End Class
