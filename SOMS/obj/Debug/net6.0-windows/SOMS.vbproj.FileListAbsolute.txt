@@ -33,3 +33,5 @@ C:\Users\VICTUS\source\repos\SOMS\SOMS\bin\Debug\net6.0-windows\runtimes\win\lib
 C:\Users\VICTUS\source\repos\SOMS\SOMS\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\SOMS.vbproj.AssemblyReference.cache
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\SOMS.vbproj.Up2Date
+C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\orderPageView.g.vb
+C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\orderPageView.baml

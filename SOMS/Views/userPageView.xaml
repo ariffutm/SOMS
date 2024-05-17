@@ -41,11 +41,9 @@
             </Grid>
         </GroupBox>
         <StackPanel Height="40" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="ButtonAdd" Content="Add" Height="30" Width="80" 
-             Margin="5,0,5,0"/>
+            <Button x:Name="ButtonAdd" Content="Add" Height="30" Width="80" Margin="5,0,5,0"/>
             <Button x:Name="ButtonUpdate" Content="Update" Height="30" Width="80"/>
-            <Button x:Name="ButtonCancel" Content="Cancel" Height="30" Width="80" 
-                   Margin="5,0,10,0"/>
+            <Button x:Name="ButtonCancel" Content="Cancel" Height="30" Width="80" Margin="5,0,10,0"/>
         </StackPanel>
         <StackPanel Height="210">
             <DataGrid VerticalScrollBarVisibility="Auto" x:Name="DataGridUser" AutoGenerateColumns="False"

@@ -10,6 +10,9 @@
     <Compile Update="Views\loginPageView.xaml.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\orderPageView.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\profilePageView.xaml.vb">
       <SubType>Code</SubType>
     </Compile>
@@ -22,6 +25,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\loginPageView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\orderPageView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\profilePageView.xaml">

@@ -9,12 +9,10 @@ Namespace ViewModels
         Dim data As OleDbDataReader
 
         Public Property userList As New ObservableCollection(Of User)
-
         'UC013 Read
         Public Sub getAllUserListFromModel()
             Dim sql As String = "Select * From [User]"
             Dim com As New OleDbCommand(sql, con)
-
             con.Open()
             'Exceute reader, then load into table
             data = com.ExecuteReader()
@@ -34,7 +32,6 @@ Namespace ViewModels
         Public Sub addUserToModel(Username As String, Password As String, Status As String)
             Dim sql As String = "INSERT INTO [User] (Username, [Password], Status) VALUES (?,?,?)"
             Dim com = New OleDbCommand(sql, con)
-
             con.Open()
             If String.IsNullOrWhiteSpace(Username) Or String.IsNullOrWhiteSpace(Password) Or String.IsNullOrEmpty(Status) Then
                 MessageBox.Show("Please fill out all text boxes.")
@@ -67,7 +64,6 @@ Namespace ViewModels
         Public Function updateUserToModel(Id As String, Username As String, Password As String, Status As String) As Boolean
             Dim sql As String = "UPDATE [User] SET Username=?, [Password]=?, Status=? WHERE Id=?"
             Dim com = New OleDbCommand(sql, con)
-
             con.Open()
             If String.IsNullOrEmpty(Id) Then
                 MessageBox.Show("Please click the select button below to choose the user for the update.")

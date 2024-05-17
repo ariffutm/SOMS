@@ -6,7 +6,6 @@ Partial Public Class userPageView
 
     Public Sub New()
         InitializeComponent()
-
         Me.DataContext = seeAllUserList()
     End Sub
 
@@ -19,7 +18,6 @@ Partial Public Class userPageView
     'UC013 Read
     Private Function seeAllUserList() As userPageViewModel
         Dim viewModel As New userPageViewModel
-
         viewModel.getAllUserListFromModel()
         Return viewModel
     End Function
@@ -27,7 +25,6 @@ Partial Public Class userPageView
     'UC013 Delete
     Private Sub RemoveUser(sender As Object, e As RoutedEventArgs)
         Dim user As User = DataGridUser.SelectedItem
-
         viewModel.deleteUserFromModel(user)
         Me.DataContext = seeAllUserList()
     End Sub

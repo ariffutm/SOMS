@@ -1,0 +1,111 @@
+﻿<Window x:Class="orderPageView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SOMS"
+        mc:Ignorable="d"
+        Title="orderPageView" Height="700" Width="820">
+
+    <TabControl Margin="0,0,0,-6">
+        <TabItem Header="Order system">
+            <!--<Grid Background="#FFE5E5E5"/>-->
+            <StackPanel Orientation="Vertical">
+                <GroupBox Header="Details Form" Margin="4,4,4,4" Width="785" Height="210" BorderBrush="#FF0C0D0E">
+                    <Grid Height="180">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="210*"/>
+                            <ColumnDefinition Width="70*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="300*"/>
+                        </Grid.ColumnDefinitions>
+                        <!--Row 1 Name-->
+                        <Label Content="Name" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="0" Width="44"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" x:Name="TextBoxName" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                        <Button Grid.Column="3" x:Name="ButtonUpdate" Content="Search Order" Height="21" Margin="0,4,0,4" Background="#FFDDDDDD"/>
+                        <!--Row 2 Phone-->
+                        <Label Content="Phone" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="0" Width="44"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" x:Name="TextBoxPhone" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                        <!--Row 2 Column 2 Phone-->
+                        <Label Content="Email" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="3" Width="62"/>
+                        <TextBox Grid.Row="1" Grid.Column="5" x:Name="TextBoxUsername" Margin="-75,5,0,3" Width="272" HorizontalAlignment="Center"/>
+                        <!--Row 3 Address-->
+                        <Label Content="Address" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="2" Grid.Column="0" Width="56"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" x:Name="TextBoxName1" Margin="0,5,0,3" Width="680" HorizontalAlignment="Center" Grid.ColumnSpan="5"/>
+                        <!--Row 4 Payment-->
+                        <Label Content="Payment" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="3" Grid.Column="0" Width="60"/>
+                        <ComboBox Grid.Row="3" Grid.Column="1" x:Name="TextBoxName12" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+                            <ComboBoxItem Content="Cash On Delivery"></ComboBoxItem>
+                            <ComboBoxItem Content="Online Transfer"></ComboBoxItem>
+                        </ComboBox>
+                        <!--Row 5 Transaction, Courier ID-->
+                        <Label Content="Transaction" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="4" Width="70"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" x:Name="TextBoxPhone1" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                        <!--Row 5 Column 2 Courier ID-->
+                        <Label Content="Courier ID" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="4" Grid.Column="3" Width="65"/>
+                        <TextBox Grid.Row="4" Grid.Column="5" x:Name="TextBoxUsername1" Margin="-75,5,0,3" Width="272" HorizontalAlignment="Center"/>
+                        <!--Row 6 Status, Date Issue-->
+                        <Label Content="Status" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="5" Grid.Column="0" Width="44"/>
+                        <TextBox Grid.Row="5" Grid.Column="1" x:Name="TextBoxPhone12" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                        <!--Row 6 Column 2 Phone-->
+                        <Label Content="Date" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="5" Grid.Column="3" Width="62"/>
+                        <DatePicker Grid.Row="5" Grid.Column="5" x:Name="TextBoxUsername123" Margin="-235,5,0,3" Width="110" HorizontalAlignment="Center">
+                            <DatePicker.BorderBrush>
+                                <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                                    <GradientStop Color="#FFA3AEB9"/>
+                                    <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                                    <GradientStop Color="#FF718597" Offset="0.375"/>
+                                    <GradientStop Color="#FFABADB3" Offset="1"/>
+                                </LinearGradientBrush>
+                            </DatePicker.BorderBrush>
+                        </DatePicker>
+                    </Grid>
+                </GroupBox>
+                <StackPanel Orientation="Horizontal">
+                    <GroupBox Header="Item Form" Margin="4,4,4,4" Width="785" Height="120" BorderBrush="#FF0C0D0E">
+                        <Grid Height="100">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                             </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition Width="10*"/>
+                                <ColumnDefinition Width="210*"/>
+                                <ColumnDefinition Width="70*"/>
+                                <ColumnDefinition Width="10*"/>
+                                <ColumnDefinition Width="300*"/>
+                            </Grid.ColumnDefinitions>
+                            <!--Row 1 Phone-->
+                            <Label Content="Name" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="0" Width="44"/>
+                            <ComboBox Grid.Row="0" Grid.Column="1" x:Name="TextBoxPhone123" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                            <!--Row 2 Phone-->
+                            <Label Content="Price" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="0" Width="44"/>
+                            <TextBox  IsReadOnly="True"  Grid.Row="1" Grid.Column="1" x:Name="TextBoxPhone1234" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2" Background="LightGray"/>
+                            <!--Row 2 Column 2 Phone-->
+                            <Label Content="Quantity" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="3" Width="62"/>
+                            <TextBox Grid.Row="1" Grid.Column="5" x:Name="TextBoxUsername12345" Margin="-75,5,0,3" Width="272" HorizontalAlignment="Center"/>
+                            <!--Row 2 Phone-->
+                            <Label Content="Total" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="2" Grid.Column="0" Width="44"/>
+                            <TextBox  IsReadOnly="True" Grid.Row="2" Grid.Column="1" x:Name="TextBoxPhone12345" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2" Background="LightGray"/>
+                        </Grid>
+                    </GroupBox>
+                </StackPanel>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="Item system">
+            <Grid Background="#FFE5E5E5"/>
+        </TabItem>
+    </TabControl>
+</Window>
