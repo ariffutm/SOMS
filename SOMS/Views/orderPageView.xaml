@@ -11,6 +11,7 @@
         <TabItem Header="Order system">
             <!--<Grid Background="#FFE5E5E5"/>-->
             <StackPanel Orientation="Vertical">
+                <!--<First GroupBox/>-->
                 <GroupBox Header="Details Form" Margin="4,4,4,4" Width="785" Height="210" BorderBrush="#FF0C0D0E">
                     <Grid Height="180">
                         <Grid.RowDefinitions>
@@ -31,35 +32,38 @@
                         </Grid.ColumnDefinitions>
                         <!--Row 1 Name-->
                         <Label Content="Name" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="0" Width="44"/>
-                        <TextBox Grid.Row="0" Grid.Column="1" x:Name="TextBoxName" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" x:Name="TextBoxCustomer" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
                         <Button Grid.Column="3" x:Name="ButtonUpdate" Content="Search Order" Height="21" Margin="0,4,0,4" Background="#FFDDDDDD"/>
                         <!--Row 2 Phone-->
                         <Label Content="Phone" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="0" Width="44"/>
                         <TextBox Grid.Row="1" Grid.Column="1" x:Name="TextBoxPhone" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
                         <!--Row 2 Column 2 Phone-->
                         <Label Content="Email" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="3" Width="62"/>
-                        <TextBox Grid.Row="1" Grid.Column="5" x:Name="TextBoxUsername" Margin="-75,5,0,3" Width="272" HorizontalAlignment="Center"/>
+                        <TextBox Grid.Row="1" Grid.Column="5" x:Name="TextBoxEmail" Margin="-75,5,0,3" Width="272" HorizontalAlignment="Center"/>
                         <!--Row 3 Address-->
                         <Label Content="Address" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="2" Grid.Column="0" Width="56"/>
-                        <TextBox Grid.Row="2" Grid.Column="1" x:Name="TextBoxName1" Margin="0,5,0,3" Width="680" HorizontalAlignment="Center" Grid.ColumnSpan="5"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" x:Name="TextBoxAddress" Margin="0,5,0,3" Width="680" HorizontalAlignment="Center" Grid.ColumnSpan="5"/>
                         <!--Row 4 Payment-->
                         <Label Content="Payment" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="3" Grid.Column="0" Width="60"/>
-                        <ComboBox Grid.Row="3" Grid.Column="1" x:Name="TextBoxName12" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+                        <ComboBox Grid.Row="3" Grid.Column="1" x:Name="TextBoxPayment" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2">
                             <ComboBoxItem Content="Cash On Delivery"></ComboBoxItem>
                             <ComboBoxItem Content="Online Transfer"></ComboBoxItem>
                         </ComboBox>
                         <!--Row 5 Transaction, Courier ID-->
                         <Label Content="Transaction" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="4" Width="70"/>
-                        <TextBox Grid.Row="4" Grid.Column="1" x:Name="TextBoxPhone1" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" x:Name="TextBoxTransaction" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
                         <!--Row 5 Column 2 Courier ID-->
                         <Label Content="Courier ID" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="4" Grid.Column="3" Width="65"/>
-                        <TextBox Grid.Row="4" Grid.Column="5" x:Name="TextBoxUsername1" Margin="-75,5,0,3" Width="272" HorizontalAlignment="Center"/>
+                        <TextBox Grid.Row="4" Grid.Column="5" x:Name="TextBoxCourier" Margin="-75,5,0,3" Width="272" HorizontalAlignment="Center"/>
                         <!--Row 6 Status, Date Issue-->
                         <Label Content="Status" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="5" Grid.Column="0" Width="44"/>
-                        <TextBox Grid.Row="5" Grid.Column="1" x:Name="TextBoxPhone12" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                        <ComboBox Grid.Row="5" Grid.Column="1" x:Name="TextBoxStatus" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+                            <ComboBoxItem Content="Completed"></ComboBoxItem>
+                            <ComboBoxItem IsSelected="True" Content="Delivered"></ComboBoxItem>
+                        </ComboBox>
                         <!--Row 6 Column 2 Phone-->
                         <Label Content="Date" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="5" Grid.Column="3" Width="62"/>
-                        <DatePicker Grid.Row="5" Grid.Column="5" x:Name="TextBoxUsername123" Margin="-235,5,0,3" Width="110" HorizontalAlignment="Center">
+                        <DatePicker Grid.Row="5" Grid.Column="5" x:Name="TextBoxDate" Margin="-235,5,0,3" Width="110" HorizontalAlignment="Center">
                             <DatePicker.BorderBrush>
                                 <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
                                     <GradientStop Color="#FFA3AEB9"/>
@@ -71,6 +75,7 @@
                         </DatePicker>
                     </Grid>
                 </GroupBox>
+                <!--<Second GroupBox/>-->
                 <StackPanel Orientation="Horizontal">
                     <GroupBox Header="Item Form" Margin="4,4,4,4" Width="785" Height="120" BorderBrush="#FF0C0D0E">
                         <Grid Height="100">
@@ -78,7 +83,7 @@
                                 <RowDefinition Height="1*"/>
                                 <RowDefinition Height="1*"/>
                                 <RowDefinition Height="1*"/>
-                             </Grid.RowDefinitions>
+                            </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="70"/>
                                 <ColumnDefinition Width="10*"/>
@@ -87,20 +92,60 @@
                                 <ColumnDefinition Width="10*"/>
                                 <ColumnDefinition Width="300*"/>
                             </Grid.ColumnDefinitions>
-                            <!--Row 1 Phone-->
+                            <!--Row 1 Name-->
                             <Label Content="Name" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="0" Width="44"/>
-                            <ComboBox Grid.Row="0" Grid.Column="1" x:Name="TextBoxPhone123" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
-                            <!--Row 2 Phone-->
-                            <Label Content="Price" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="0" Width="44"/>
-                            <TextBox  IsReadOnly="True"  Grid.Row="1" Grid.Column="1" x:Name="TextBoxPhone1234" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2" Background="LightGray"/>
-                            <!--Row 2 Column 2 Phone-->
+                            <ComboBox Grid.Row="0" Grid.Column="1" x:Name="TextBoxItem" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                            <!--Row 2 Price-->
+                            <Label Content="Price (RM)" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Width="70"/>
+                            <TextBox  IsReadOnly="True"  Grid.Row="1" Grid.Column="1" x:Name="TextBoxPrice" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2" Background="LightGray"/>
+                            <!--Row 2 Column 2 Quantity-->
                             <Label Content="Quantity" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="3" Width="62"/>
-                            <TextBox Grid.Row="1" Grid.Column="5" x:Name="TextBoxUsername12345" Margin="-75,5,0,3" Width="272" HorizontalAlignment="Center"/>
-                            <!--Row 2 Phone-->
-                            <Label Content="Total" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="2" Grid.Column="0" Width="44"/>
-                            <TextBox  IsReadOnly="True" Grid.Row="2" Grid.Column="1" x:Name="TextBoxPhone12345" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2" Background="LightGray"/>
+                            <TextBox Grid.Row="1" Grid.Column="5" x:Name="TextBoxQuantity" Margin="-75,5,0,3" Width="272" HorizontalAlignment="Center"/>
+                            <!--Row 2 Total-->
+                            <Label Content="Total (RM)" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="2" Width="70"/>
+                            <TextBox  IsReadOnly="True" Grid.Row="2" Grid.Column="1" x:Name="TextBoxTotal" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2" Background="LightGray"/>
                         </Grid>
                     </GroupBox>
+                </StackPanel>
+                <!--<Buttons Panel/>-->
+                <StackPanel Height="40" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="ButtonAdd" Content="Add New Order" Height="30" Width="105" Margin="5,0,5,0"/>
+                    <Button x:Name="ButtonUpdate1" Content="Update Order" Height="30" Width="105"/>
+                    <Button x:Name="ButtonCancel" Content="Back to Dashboard" Height="30" Width="105" Margin="5,0,10,0"/>
+                </StackPanel>
+                <!--<Grid Panel/>-->
+                <StackPanel Height="210">
+                    <DockPanel LastChildFill="True">
+                        <TextBlock Text="Order's Item List"
+                                   Background="#FF160C0C"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   FontWeight="SemiBold"
+                                   TextAlignment="Center"
+                                   DockPanel.Dock="Top" />
+                        <DataGrid VerticalScrollBarVisibility="Auto" x:Name="DataGridOrderItem" AutoGenerateColumns="False"
+                        ItemsSource="{Binding userList}" CanUserAddRows="False" Height="200" Margin="10">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Name" Binding="{Binding Path=Id}"  Width="100"  IsReadOnly="True"/>
+                                <DataGridTextColumn Header="Quantity (RM)" Binding="{Binding Path=Username}" Width="100"  IsReadOnly="True"/>
+                                <DataGridTextColumn Header="Total Price (RM)" Binding="{Binding Path=Password}" Width="100"  IsReadOnly="True"/>
+                                <DataGridTemplateColumn Width="50">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Content="Select" x:Name="ButtonEdit"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Width="50">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Content="Delete" x:Name="ButtonDelete"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </DockPanel>
                 </StackPanel>
             </StackPanel>
         </TabItem>

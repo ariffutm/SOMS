@@ -22,20 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Application.xaml",
-              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Application.xaml",
-              "RelativeDocumentMoniker": "SOMS\\Application.xaml",
-              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Application.xaml",
-              "RelativeToolTip": "SOMS\\Application.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-16T03:56:04.468Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -58,6 +46,18 @@
               "RelativeToolTip": "SOMS\\Views\\orderPageView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-05-15T14:59:53.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Application.xaml",
+              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Application.xaml",
+              "RelativeDocumentMoniker": "SOMS\\Application.xaml",
+              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Application.xaml",
+              "RelativeToolTip": "SOMS\\Application.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-16T03:56:04.468Z",
               "EditorCaption": ""
             }
           ]
