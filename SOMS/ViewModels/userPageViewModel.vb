@@ -7,7 +7,6 @@ Namespace ViewModels
     Public Class userPageViewModel
         Dim con As New OleDbConnection(Database.dbProvider)
         Dim data As OleDbDataReader
-
         Public Property userList As New ObservableCollection(Of User)
         'UC013 Read
         Public Sub getAllUserListFromModel()

@@ -1,6 +1,4 @@
-﻿Imports SOMS.ViewModels
-
-Public Class profilePageView
+﻿Public Class profilePageView
     'UC011
     Private Sub SendProfileUpdated_Click(sender As Object, e As RoutedEventArgs)
         Dim viewModel = New ProfilePageViewModel

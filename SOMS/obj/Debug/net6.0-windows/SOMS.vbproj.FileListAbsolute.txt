@@ -35,3 +35,6 @@ C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\SOMS.vbproj.Asse
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\SOMS.vbproj.Up2Date
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\orderPageView.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\orderPageView.baml
+C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\itemPageView.g.vb
+C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.vb
+C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\itemPageView.baml

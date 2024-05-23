@@ -8,6 +8,7 @@
         Title="orderPageView" Height="700" Width="820">
 
     <TabControl Margin="0,0,0,-6">
+        <!--Order Page-->
         <TabItem Header="Order system">
             <!--<Grid Background="#FFE5E5E5"/>-->
             <StackPanel Orientation="Vertical">
@@ -32,38 +33,39 @@
                         </Grid.ColumnDefinitions>
                         <!--Row 1 Name-->
                         <Label Content="Name" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="0" Width="44"/>
-                        <TextBox Grid.Row="0" Grid.Column="1" x:Name="TextBoxCustomer" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
-                        <Button Grid.Column="3" x:Name="ButtonUpdate" Content="Search Order" Height="21" Margin="0,4,0,4" Background="#FFDDDDDD"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" x:Name="TxtBxCustomerName" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                        <Button Grid.Column="3" x:Name="ButtonSearchOrder" Content="Search Order" Height="21" Margin="0,4,0,4" Background="#FFDDDDDD"/>
                         <!--Row 2 Phone-->
                         <Label Content="Phone" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="0" Width="44"/>
-                        <TextBox Grid.Row="1" Grid.Column="1" x:Name="TextBoxPhone" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" x:Name="TxtBxPhone" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
                         <!--Row 2 Column 2 Phone-->
                         <Label Content="Email" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="3" Width="62"/>
-                        <TextBox Grid.Row="1" Grid.Column="5" x:Name="TextBoxEmail" Margin="-75,5,0,3" Width="272" HorizontalAlignment="Center"/>
+                        <TextBox Grid.Row="1" Grid.Column="5" x:Name="TxtBxEmail" Margin="-75,5,0,3" Width="272" HorizontalAlignment="Center"/>
                         <!--Row 3 Address-->
                         <Label Content="Address" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="2" Grid.Column="0" Width="56"/>
-                        <TextBox Grid.Row="2" Grid.Column="1" x:Name="TextBoxAddress" Margin="0,5,0,3" Width="680" HorizontalAlignment="Center" Grid.ColumnSpan="5"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" x:Name="TxtBxAddress" Margin="0,5,0,3" Width="680" HorizontalAlignment="Center" Grid.ColumnSpan="5"/>
                         <!--Row 4 Payment-->
                         <Label Content="Payment" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="3" Grid.Column="0" Width="60"/>
-                        <ComboBox Grid.Row="3" Grid.Column="1" x:Name="TextBoxPayment" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+                        <ComboBox Grid.Row="3" Grid.Column="1" x:Name="CmbBxPayment" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2">
                             <ComboBoxItem Content="Cash On Delivery"></ComboBoxItem>
-                            <ComboBoxItem Content="Online Transfer"></ComboBoxItem>
+                            <ComboBoxItem IsSelected="True"  Content="Online Transfer"></ComboBoxItem>
                         </ComboBox>
                         <!--Row 5 Transaction, Courier ID-->
                         <Label Content="Transaction" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="4" Width="70"/>
-                        <TextBox Grid.Row="4" Grid.Column="1" x:Name="TextBoxTransaction" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" x:Name="TxtBxTransaction" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
                         <!--Row 5 Column 2 Courier ID-->
                         <Label Content="Courier ID" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="4" Grid.Column="3" Width="65"/>
-                        <TextBox Grid.Row="4" Grid.Column="5" x:Name="TextBoxCourier" Margin="-75,5,0,3" Width="272" HorizontalAlignment="Center"/>
+                        <TextBox Grid.Row="4" Grid.Column="5" x:Name="TxtBxCourier" Margin="-75,5,0,3" Width="272" HorizontalAlignment="Center"/>
                         <!--Row 6 Status, Date Issue-->
                         <Label Content="Status" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="5" Grid.Column="0" Width="44"/>
-                        <ComboBox Grid.Row="5" Grid.Column="1" x:Name="TextBoxStatus" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2">
-                            <ComboBoxItem Content="Completed"></ComboBoxItem>
-                            <ComboBoxItem IsSelected="True" Content="Delivered"></ComboBoxItem>
+                        <ComboBox Grid.Row="5" Grid.Column="1" x:Name="TxtBxStatus" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+                            <ComboBoxItem Content="Delivered"></ComboBoxItem>
+                            <ComboBoxItem Content="Return"></ComboBoxItem>
+                            <ComboBoxItem IsSelected="True" Content="Paid"></ComboBoxItem>
                         </ComboBox>
                         <!--Row 6 Column 2 Phone-->
                         <Label Content="Date" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="5" Grid.Column="3" Width="62"/>
-                        <DatePicker Grid.Row="5" Grid.Column="5" x:Name="TextBoxDate" Margin="-235,5,0,3" Width="110" HorizontalAlignment="Center">
+                        <DatePicker Grid.Row="5" Grid.Column="5" x:Name="TxtBxDate" Margin="-235,5,0,3" Width="110" HorizontalAlignment="Center">
                             <DatePicker.BorderBrush>
                                 <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
                                     <GradientStop Color="#FFA3AEB9"/>
@@ -93,24 +95,31 @@
                                 <ColumnDefinition Width="300*"/>
                             </Grid.ColumnDefinitions>
                             <!--Row 1 Name-->
-                            <Label Content="Name" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="0" Width="44"/>
-                            <ComboBox Grid.Row="0" Grid.Column="1" x:Name="TextBoxItem" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                            <Label Content="Name" HorizontalAlignment="Left" VerticalContentAlignment="Center" 
+                                   Grid.Row="0" Grid.Column="0" Width="44"/>
+                            <ComboBox Grid.Row="0" Grid.Column="1" x:Name="CmbBxItem" DisplayMemberPath="Name"
+                                      Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
                             <!--Row 2 Price-->
                             <Label Content="Price (RM)" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Width="70"/>
-                            <TextBox  IsReadOnly="True"  Grid.Row="1" Grid.Column="1" x:Name="TextBoxPrice" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2" Background="LightGray"/>
+                            <TextBox TextChanged="TotalHandler" Grid.Row="1" Grid.Column="1" x:Name="TxtBxPrice" Margin="0,5,0,3" 
+                                      Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
                             <!--Row 2 Column 2 Quantity-->
-                            <Label Content="Quantity" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="3" Width="62"/>
-                            <TextBox Grid.Row="1" Grid.Column="5" x:Name="TextBoxQuantity" Margin="-75,5,0,3" Width="272" HorizontalAlignment="Center"/>
+                            <Label Content="Quantity" HorizontalAlignment="Center" VerticalContentAlignment="Center" 
+                                   Grid.Row="1" Grid.Column="3" Width="62"/>
+                            <TextBox TextChanged="TotalHandler" Grid.Row="1" Grid.Column="5" x:Name="TxtBxQuantity" Margin="-75,5,0,3" 
+                                     Width="272" HorizontalAlignment="Center"/>
                             <!--Row 2 Total-->
-                            <Label Content="Total (RM)" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="2" Width="70"/>
-                            <TextBox  IsReadOnly="True" Grid.Row="2" Grid.Column="1" x:Name="TextBoxTotal" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2" Background="LightGray"/>
+                            <Label Content="Total (RM)" HorizontalAlignment="Center" 
+                                   VerticalContentAlignment="Center" Grid.Row="2" Width="70"/>
+                            <TextBox  IsReadOnly="True" Grid.Row="2" Grid.Column="1" x:Name="TxtBxTotal" Margin="0,5,0,3" 
+                                      Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2" Background="LightGray"/>
                         </Grid>
                     </GroupBox>
                 </StackPanel>
                 <!--<Buttons Panel/>-->
                 <StackPanel Height="40" Orientation="Horizontal" HorizontalAlignment="Right">
                     <Button x:Name="ButtonAdd" Content="Add New Order" Height="30" Width="105" Margin="5,0,5,0"/>
-                    <Button x:Name="ButtonUpdate1" Content="Update Order" Height="30" Width="105"/>
+                    <Button x:Name="ButtonUpdate" Content="Update Order" Height="30" Width="105"/>
                     <Button x:Name="ButtonCancel" Content="Back to Dashboard" Height="30" Width="105" Margin="5,0,10,0"/>
                 </StackPanel>
                 <!--<Grid Panel/>-->
@@ -128,6 +137,7 @@
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="Name" Binding="{Binding Path=Id}"  Width="100"  IsReadOnly="True"/>
                                 <DataGridTextColumn Header="Quantity (RM)" Binding="{Binding Path=Username}" Width="100"  IsReadOnly="True"/>
+                                <DataGridTextColumn Header="Price (RM)" Binding="{Binding Path=Username}" Width="100"  IsReadOnly="True"/>
                                 <DataGridTextColumn Header="Total Price (RM)" Binding="{Binding Path=Password}" Width="100"  IsReadOnly="True"/>
                                 <DataGridTemplateColumn Width="50">
                                     <DataGridTemplateColumn.CellTemplate>
@@ -149,8 +159,9 @@
                 </StackPanel>
             </StackPanel>
         </TabItem>
+        <!--Item Page-->
         <TabItem Header="Item system">
-            <Grid Background="#FFE5E5E5"/>
+            <local:itemPageView/>
         </TabItem>
     </TabControl>
 </Window>

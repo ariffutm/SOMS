@@ -3,7 +3,6 @@ Imports System.Data.OleDb
 Imports SOMS.Models
 
 Public Class ProfilePageViewModel
-    Public Model As New User
     Dim con As New OleDbConnection(Database.dbProvider)
     Dim data As OleDbDataReader
 
