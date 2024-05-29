@@ -6,7 +6,6 @@
         Private _itemId As String
         Private _itemName As String
         Private _quantity As String
-        Private _status As String
         Private _price As String
         Private _total As String
 

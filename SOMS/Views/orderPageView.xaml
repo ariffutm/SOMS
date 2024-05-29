@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SOMS"
         mc:Ignorable="d"
-        Title="orderPageView" Height="700" Width="820">
+        Title="orderPageView" Height="790" Width="820">
 
     <TabControl Margin="0,0,0,-6">
         <!--Order Page-->
@@ -13,7 +13,7 @@
             <!--<Grid Background="#FFE5E5E5"/>-->
             <StackPanel Orientation="Vertical">
                 <!--<First GroupBox/>-->
-                <GroupBox Header="Details Form" Margin="4,4,4,4" Width="785" Height="210" BorderBrush="#FF0C0D0E">
+                <GroupBox Header="Order's Details Form" Margin="4,4,4,4" Width="785" Height="210" BorderBrush="#FF0C0D0E">
                     <Grid Height="180">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="1*"/>
@@ -32,7 +32,7 @@
                             <ColumnDefinition Width="300*"/>
                         </Grid.ColumnDefinitions>
                         <!--Row 1 Name-->
-                        <Label Content="Name" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="0" Width="44"/>
+                        <Label Content="Customer" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Width="70"/>
                         <TextBox Grid.Row="0" Grid.Column="1" x:Name="TxtBxCustomerName" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
                         <Button Grid.Column="3" x:Name="ButtonSearchOrder" Content="Search Order" Height="21" Margin="0,4,0,4" Background="#FFDDDDDD"/>
                         <!--Row 2 Phone-->
@@ -51,14 +51,14 @@
                             <ComboBoxItem IsSelected="True"  Content="Online Transfer"></ComboBoxItem>
                         </ComboBox>
                         <!--Row 5 Transaction, Courier ID-->
-                        <Label Content="Transaction" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="4" Width="70"/>
-                        <TextBox Grid.Row="4" Grid.Column="1" x:Name="TxtBxTransaction" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                        <Label Content="Reference" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="4" Width="70"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" x:Name="TxtBxId" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
                         <!--Row 5 Column 2 Courier ID-->
                         <Label Content="Courier ID" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="4" Grid.Column="3" Width="65"/>
                         <TextBox Grid.Row="4" Grid.Column="5" x:Name="TxtBxCourier" Margin="-75,5,0,3" Width="272" HorizontalAlignment="Center"/>
                         <!--Row 6 Status, Date Issue-->
                         <Label Content="Status" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="5" Grid.Column="0" Width="44"/>
-                        <ComboBox Grid.Row="5" Grid.Column="1" x:Name="TxtBxStatus" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+                        <ComboBox Grid.Row="5" Grid.Column="1" x:Name="CmbBxStatus" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2">
                             <ComboBoxItem Content="Delivered"></ComboBoxItem>
                             <ComboBoxItem Content="Return"></ComboBoxItem>
                             <ComboBoxItem IsSelected="True" Content="Paid"></ComboBoxItem>
@@ -78,49 +78,67 @@
                     </Grid>
                 </GroupBox>
                 <!--<Second GroupBox/>-->
-                <StackPanel Orientation="Horizontal">
-                    <GroupBox Header="Item Form" Margin="4,4,4,4" Width="785" Height="120" BorderBrush="#FF0C0D0E">
-                        <Grid Height="100">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="1*"/>
-                                <RowDefinition Height="1*"/>
-                                <RowDefinition Height="1*"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="70"/>
-                                <ColumnDefinition Width="10*"/>
-                                <ColumnDefinition Width="210*"/>
-                                <ColumnDefinition Width="70*"/>
-                                <ColumnDefinition Width="10*"/>
-                                <ColumnDefinition Width="300*"/>
-                            </Grid.ColumnDefinitions>
-                            <!--Row 1 Name-->
-                            <Label Content="Name" HorizontalAlignment="Left" VerticalContentAlignment="Center" 
-                                   Grid.Row="0" Grid.Column="0" Width="44"/>
-                            <ComboBox Grid.Row="0" Grid.Column="1" x:Name="CmbBxItem" DisplayMemberPath="Name"
-                                      Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
-                            <!--Row 2 Price-->
-                            <Label Content="Price (RM)" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Width="70"/>
-                            <TextBox TextChanged="TotalHandler" Grid.Row="1" Grid.Column="1" x:Name="TxtBxPrice" Margin="0,5,0,3" 
-                                      Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
-                            <!--Row 2 Column 2 Quantity-->
-                            <Label Content="Quantity" HorizontalAlignment="Center" VerticalContentAlignment="Center" 
-                                   Grid.Row="1" Grid.Column="3" Width="62"/>
-                            <TextBox TextChanged="TotalHandler" Grid.Row="1" Grid.Column="5" x:Name="TxtBxQuantity" Margin="-75,5,0,3" 
-                                     Width="272" HorizontalAlignment="Center"/>
-                            <!--Row 2 Total-->
-                            <Label Content="Total (RM)" HorizontalAlignment="Center" 
-                                   VerticalContentAlignment="Center" Grid.Row="2" Width="70"/>
-                            <TextBox  IsReadOnly="True" Grid.Row="2" Grid.Column="1" x:Name="TxtBxTotal" Margin="0,5,0,3" 
-                                      Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2" Background="LightGray"/>
-                        </Grid>
-                    </GroupBox>
-                </StackPanel>
+                <GroupBox Header="Order's Item Form" Margin="4,4,4,4" Width="785" Height="120" BorderBrush="#FF0C0D0E">
+                    <Grid Height="100">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="210*"/>
+                            <ColumnDefinition Width="70*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="300*"/>
+                        </Grid.ColumnDefinitions>
+                        <!--Row 1 Name-->
+                        <Label Content="Name" HorizontalAlignment="Left" VerticalContentAlignment="Center" 
+                                Grid.Row="0" Grid.Column="0" Width="44"/>
+                        <ComboBox Grid.Row="0" Grid.Column="1" x:Name="CmbBxItem" DisplayMemberPath="Name"
+                                    Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                        <!--Row 2 Price-->
+                        <Label Content="Price (RM)" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Width="70"/>
+                        <TextBox TextChanged="TotalHandler" Grid.Row="1" Grid.Column="1" x:Name="TxtBxPrice" Margin="0,5,0,3" 
+                                    Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                        <!--Row 2 Column 2 Quantity-->
+                        <Label Content="Quantity" HorizontalAlignment="Center" VerticalContentAlignment="Center" 
+                                Grid.Row="1" Grid.Column="3" Width="62"/>
+                        <TextBox TextChanged="TotalHandler" Grid.Row="1" Grid.Column="5" x:Name="TxtBxQuantity" Margin="-75,5,0,3" 
+                                    Width="272" HorizontalAlignment="Center"/>
+                        <!--Row 2 Total-->
+                        <Label Content="Sum (RM)" HorizontalAlignment="Center" 
+                                VerticalContentAlignment="Center" Grid.Row="2" Width="70"/>
+                        <TextBox  IsReadOnly="True" Grid.Row="2" Grid.Column="1" x:Name="TxtBxTotal" Margin="0,5,0,3" 
+                                    Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2" Background="LightGray"/>
+                    </Grid>
+                </GroupBox>
+                <!--<third GroupBox/>-->
+                <GroupBox Header="Summary" Margin="4,4,4,4" Width="785" Height="55" BorderBrush="#FF0C0D0E">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="210*"/>
+                            <ColumnDefinition Width="70*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="300*"/>
+                        </Grid.ColumnDefinitions>
+                        <!--Row 1 Name-->
+                        <Label Content="Total (RM)" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Width="70" Height="30"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" x:Name="TxtBxOrderTotal" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2" Height="22"/>
+                        <Button Grid.Column="3" x:Name="ButtonReceipt" Content="Make Receipt" Height="21" Margin="0,4,0,4" Background="#FFDDDDDD"/>
+                    </Grid>
+                </GroupBox>
                 <!--<Buttons Panel/>-->
                 <StackPanel Height="40" Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button x:Name="ButtonAdd" Content="Add New Order" Height="30" Width="105" Margin="5,0,5,0"/>
-                    <Button x:Name="ButtonUpdate" Content="Update Order" Height="30" Width="105"/>
-                    <Button x:Name="ButtonCancel" Content="Back to Dashboard" Height="30" Width="105" Margin="5,0,10,0"/>
+                    <Button x:Name="ButtonAdd" Content="Add Order Item" Height="30" Width="105" Margin="5,0,5,0" IsCancel="True"/>
+                    <Button x:Name="ButtonUpdate" Content="Update Order Detail" Height="30" Width="124"/>
+                    <Button x:Name="ButtonCancel" Content="Clear Textbox" Height="30" Width="105" Margin="5,0,10,0"/>
                 </StackPanel>
                 <!--<Grid Panel/>-->
                 <StackPanel Height="210">
@@ -132,31 +150,25 @@
                                    FontWeight="SemiBold"
                                    TextAlignment="Center"
                                    DockPanel.Dock="Top" />
-                        <DataGrid VerticalScrollBarVisibility="Auto" x:Name="DataGridOrderItem" AutoGenerateColumns="False"
-                        ItemsSource="{Binding userList}" CanUserAddRows="False" Height="200" Margin="10">
-                            <DataGrid.Columns>
-                                <DataGridTextColumn Header="Name" Binding="{Binding Path=Id}"  Width="100"  IsReadOnly="True"/>
-                                <DataGridTextColumn Header="Quantity (RM)" Binding="{Binding Path=Username}" Width="100"  IsReadOnly="True"/>
-                                <DataGridTextColumn Header="Price (RM)" Binding="{Binding Path=Username}" Width="100"  IsReadOnly="True"/>
-                                <DataGridTextColumn Header="Total Price (RM)" Binding="{Binding Path=Password}" Width="100"  IsReadOnly="True"/>
-                                <DataGridTemplateColumn Width="50">
-                                    <DataGridTemplateColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <Button Content="Select" x:Name="ButtonEdit"/>
-                                        </DataTemplate>
-                                    </DataGridTemplateColumn.CellTemplate>
-                                </DataGridTemplateColumn>
-                                <DataGridTemplateColumn Width="50">
-                                    <DataGridTemplateColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <Button Content="Delete" x:Name="ButtonDelete"/>
-                                        </DataTemplate>
-                                    </DataGridTemplateColumn.CellTemplate>
-                                </DataGridTemplateColumn>
-                            </DataGrid.Columns>
-                        </DataGrid>
                     </DockPanel>
+                    <DataGrid VerticalScrollBarVisibility="Auto" x:Name="DataGridOrderItem" AutoGenerateColumns="False"
+                     ItemsSource="{Binding orderItemList}" CanUserAddRows="False" Height="200" Margin="10">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Path=ItemName}"  Width="100"  IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Quantity (RM)" Binding="{Binding Path=Quantity}" Width="100"  IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Price (RM)" Binding="{Binding Path=Price}" Width="100"  IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Total Price (RM)" Binding="{Binding Path=Total}" Width="100"  IsReadOnly="True"/>
+                            <DataGridTemplateColumn Width="50">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Delete" x:Name="ButtonDelete"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
                 </StackPanel>
+           
             </StackPanel>
         </TabItem>
         <!--Item Page-->
