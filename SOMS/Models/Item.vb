@@ -5,6 +5,8 @@
         Private _name As String
         Private _price As String
         Private _description As String
+        Private _stock As String
+
 
         Public Property ID As String
             Get
@@ -39,6 +41,15 @@
             End Get
             Set(ByVal value As String)
                 _description = value
+            End Set
+        End Property
+
+        Public Property Stock As String
+            Get
+                Return _stock
+            End Get
+            Set(ByVal value As String)
+                _stock = value
             End Set
         End Property
 

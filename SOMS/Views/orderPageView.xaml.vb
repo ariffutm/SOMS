@@ -31,7 +31,7 @@ Public Class orderPageView
     ''<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>
     'Populate ComboBoxItem
     Private Sub loadItemIntoComboboxItem()
-        itemModel.getItemListFromModel()
+        itemModel.getAllItemListFromModel()
         CmbBxItem.ItemsSource = itemModel.itemList
     End Sub
     'Total Payment Calculation
