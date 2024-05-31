@@ -1,0 +1,19 @@
+﻿<Window x:Class="orderSubsystemPageView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SOMS"
+        mc:Ignorable="d"
+        Title="orderSubsystemPageView" Height="790" Width="820">
+    <TabControl Margin="0,0,0,-6">
+        <!--Order Page-->
+        <TabItem Header="Order">
+            <local:orderPageView/>
+        </TabItem>
+        <!--Item Page-->
+        <TabItem Header="Item">
+            <local:itemPageView/>
+        </TabItem>
+    </TabControl>
+</Window>

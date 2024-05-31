@@ -33,7 +33,6 @@ Public Class itemPageViewModel
     Public Sub addNewItemIntoModel(Id As String, Name As String, Price As String, Description As String, Stock As String)
         Dim sql As String = "INSERT INTO [Item] (Id, itemName, Price, Description, Stock) VALUES (?,?,?,?,?)"
         Dim com = New OleDbCommand(sql, con)
-        con.Open()
         If String.IsNullOrEmpty(Id) Then
             MessageBox.Show("Please fill in the correct ID for the item.")
         ElseIf DataValidationGood(Id, Name, Price, Description, Stock) Then
@@ -45,8 +44,8 @@ Public Class itemPageViewModel
             com.Parameters.AddWithValue("@stock", Stock)
             com.ExecuteNonQuery()
             MessageBox.Show("New item added to the Database")
+            con.Close()
         End If
-        con.Close()
     End Sub
 
     'UC008 Delete
