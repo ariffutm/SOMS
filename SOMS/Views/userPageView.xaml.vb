@@ -1,6 +1,5 @@
 ﻿Imports SOMS.Models
 Imports SOMS.ViewModels
-
 Partial Public Class userPageView
     Dim viewModel As New userPageViewModel
 

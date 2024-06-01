@@ -13,7 +13,7 @@
     <Compile Update="Views\loginPageView.xaml.vb">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\orderPageView.xaml.vb">
+    <Compile Update="Views\orderListView.xaml.vb">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\orderSubsystemPageView.xaml.vb">
@@ -23,6 +23,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\userPageView.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Window1.xaml.vb">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -36,7 +39,7 @@
     <Page Update="Views\loginPageView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\orderPageView.xaml">
+    <Page Update="Views\orderListView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\orderSubsystemPageView.xaml">
@@ -46,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\userPageView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Window1.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

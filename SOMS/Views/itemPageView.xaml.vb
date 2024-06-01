@@ -1,6 +1,5 @@
 ﻿Imports SOMS.Models
 Imports SOMS.ViewModels
-
 Public Class itemPageView
     Dim viewModel As New itemPageViewModel
 
