@@ -1,10 +1,8 @@
-﻿Imports System.Reflection.Emit
-Imports System.Security.Cryptography
-Imports SOMS.Models
+﻿Imports SOMS.Models
 Imports SOMS.ViewModels
 
 Public Class orderSubsystemPageView
-    Dim orderModel As New orderPageViewModel
+    Dim orderModel = orderPageViewModel.GetInstance
     Dim itemModel As New itemPageViewModel
 
     Public Sub New()
@@ -18,6 +16,7 @@ Public Class orderSubsystemPageView
                                     TxtBxAddress.Text, CmbBxPayment.Text, TxtBxId.Text,
                                     TxtBxCourier.Text, CmbBxStatus.Text, TxtBxDate.Text,
                                     itemModel.selectedItem, TxtBxPrice.Text, TxtBxQuantity.Text)
+        summaryOrderTotal()
     End Sub
     'UC005 Update Order
     '''DataGridOrderItem Delete Button Column Handler - Delete order Item
@@ -25,6 +24,7 @@ Public Class orderSubsystemPageView
         Dim orderItem As orderItem = DataGridOrderItem.SelectedItem
         orderModel.deleteOrderItemFromModel(orderItem)
         Me.DataContext = orderModel
+        summaryOrderTotal()
     End Sub
     '''Update Order Details Button Handler - Update order details
     Private Sub sendOrderUpdateDetailsByID(sender As Object, e As RoutedEventArgs) Handles ButtonUpdate.Click
@@ -62,7 +62,7 @@ Public Class orderSubsystemPageView
         itemModel.getAllItemListFromModel()
         CmbBxItem.ItemsSource = itemModel.itemList
     End Sub
-    'Total Payment Calculation
+    ''Total Payment Calculation
     Private Sub TotalHandler(sender As Object, e As TextChangedEventArgs)
         Dim Price, Total As Double, Quantity As New Integer
 
@@ -72,7 +72,7 @@ Public Class orderSubsystemPageView
         Total = Price * Quantity
         TxtBxTotal.Text = Format(Total, "0.00")
     End Sub
-    'ComboBoxPayment Events - Control
+    ''ComboBoxPayment Events - Control
     Private Sub paymentOption()
         If CmbBxPayment.Text = "Cash On Delivery" Then
             TxtBxCourier.IsReadOnly = True
@@ -83,19 +83,20 @@ Public Class orderSubsystemPageView
             TxtBxCourier.Background = Brushes.White
         End If
     End Sub
-    'Search Order Button Handler - Open OrderList
+    ''Search Order Button Handler - Open OrderList
     Private Sub ButtonSearchOrder_Click(sender As Object, e As RoutedEventArgs) Handles ButtonSearchOrder.Click
         Dim form As New orderListView
-        Me.Close()
         form.Show()
+        Me.Close()
+        'While form.mark
+        'End While
     End Sub
-    'Summary Total Calculation 
-    Private Sub SummaryTotal()
+    ''Summary Total Calculation 
+    Public Sub summaryOrderTotal()
         Dim sum As Double = 0
-        For i As Integer = 0 To DataGridOrderItem.Items.Count - 1
-            sum += Convert.ToDouble(DataGridOrderItem.Items..Value)
+        For Each row As orderItem In DataGridOrderItem.ItemsSource
+            sum += Double.Parse(row.Total)
         Next
         TxtBxOrderTotal.Text = Format(sum, "0.00")
-
     End Sub
 End Class

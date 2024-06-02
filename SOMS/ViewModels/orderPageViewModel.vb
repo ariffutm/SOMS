@@ -5,7 +5,7 @@ Imports SOMS.Models
 
 Namespace ViewModels
     Public Class orderPageViewModel
-        'Private Shared _instance As orderPageViewModel
+        Private Shared _instance As orderPageViewModel
 
         Dim con As New OleDbConnection(Database.dbProvider)
         Dim data As OleDbDataReader
@@ -18,16 +18,17 @@ Namespace ViewModels
         Public Property orderList As New ObservableCollection(Of Order)
 
         ''Singleton - To pass data between form 
-        'Public Shared Function GetInstance() As orderPageViewModel
-        '    If _instance Is Nothing Then
-        '        _instance = New orderPageViewModel()
-        '    End If
-        '    Return _instance
-        'End Function
+        Public Shared Function GetInstance() As orderPageViewModel
+            If _instance Is Nothing Then
+                _instance = New orderPageViewModel()
+            End If
+            Return _instance
+        End Function
 
         'UC005.1 Read
         ''''Select order list
         Public Sub getOrderListFromModel()
+            orderList.Clear()
             Dim sql As String = "Select * From [Order]"
             Dim com As New OleDbCommand(sql, con)
             con.Open()
@@ -75,6 +76,7 @@ Namespace ViewModels
         End Sub
         '''''Select Order's order items By Order ID
         Public Sub getOrderItemListByOrderIdFromModel(OrderId As String)
+            Testing("getOrderItemListByOrderIdFromModel")
             orderItemList.Clear()
             Dim sql As String = "Select * From [OrderItems] WHERE orderId = ?"
             Dim com As New OleDbCommand(sql, con)
@@ -115,25 +117,20 @@ Namespace ViewModels
                 addNewOrderItemIntoOrder(Id, orderItem, itemPrice, itemQuantity)
             Else
                 con.Open()
-                    com.Parameters.AddWithValue("@cust", Cust)
-                    com.Parameters.AddWithValue("@phone", Phone)
-                    com.Parameters.AddWithValue("@email", Email)
-                    com.Parameters.AddWithValue("@address", Address)
-                    com.Parameters.AddWithValue("@payment", Payment)
-                    com.Parameters.AddWithValue("@id", Id)
-                    com.Parameters.AddWithValue("@courier", Courier)
-                    com.Parameters.AddWithValue("@status", Status)
-                    com.Parameters.AddWithValue("@date", dateIssue)
-                    com.ExecuteNonQuery()
+                com.Parameters.AddWithValue("@cust", Cust)
+                com.Parameters.AddWithValue("@phone", Phone)
+                com.Parameters.AddWithValue("@email", Email)
+                com.Parameters.AddWithValue("@address", Address)
+                com.Parameters.AddWithValue("@payment", Payment)
+                com.Parameters.AddWithValue("@id", Id)
+                com.Parameters.AddWithValue("@courier", Courier)
+                com.Parameters.AddWithValue("@status", Status)
+                com.Parameters.AddWithValue("@date", dateIssue)
+                com.ExecuteNonQuery()
                 con.Close()
                 addNewOrderItemIntoOrder(Id, orderItem, itemPrice, itemQuantity)
                 MessageBox.Show("Added New Order with ID: " + Id)
             End If
-            'Catch
-            '    MessageBox.Show("Maybe the same reference ID exists. Please click the 'Search Order' button to select an existing order.")
-            'Finally
-
-            'End Try
             'Refresh order's Order Item List
             getOrderItemListByOrderIdFromModel(Id)
         End Sub
@@ -159,6 +156,7 @@ Namespace ViewModels
         End Sub
 
         'UC005.2 Delete
+        ''Delete Order Item
         Public Sub deleteOrderItemFromModel(deleteOrderItem As orderItem)
             Select Case MsgBox("Remove this item with the name: " + deleteOrderItem.ItemName, MsgBoxStyle.YesNo)
                 Case MsgBoxResult.Yes
@@ -172,6 +170,20 @@ Namespace ViewModels
                     con.Close()
             End Select
             getOrderItemListByOrderIdFromModel(deleteOrderItem.OrderID)
+        End Sub
+        ''Delete Order
+        Public Sub deleteOrderFromModel(deleteOrder As Order)
+            Select Case MsgBox("Remove this order with the ID: " + deleteOrder.Id, MsgBoxStyle.YesNo)
+                Case MsgBoxResult.Yes
+                    Dim sql As String = "DELETE FROM [Order] WHERE Id = ?"
+                    Dim com = New OleDbCommand(sql, con)
+                    'Open Connection
+                    con.Open()
+                    com.Parameters.AddWithValue("@Id", deleteOrder.Id)
+                    com.ExecuteNonQuery()
+                    MessageBox.Show("Item successfully removed from the order.")
+                    con.Close()
+            End Select
         End Sub
 
         'UC005.3 Update

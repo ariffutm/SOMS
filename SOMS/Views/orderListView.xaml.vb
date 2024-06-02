@@ -2,7 +2,9 @@
 Imports SOMS.ViewModels
 
 Public Class orderListView
-    Public viewModel As New orderPageViewModel
+    Public viewModel = orderPageViewModel.GetInstance
+    Public Shared selectedOrder As New Order
+    'Public Shared mark As Integer = 0
 
     Public Sub New()
         ' This call is required by the designer.
@@ -14,10 +16,10 @@ Public Class orderListView
     End Sub
     'U005 Update Order
     '''Select to Update
-    Private Sub SelectOrder(sender As Object, e As RoutedEventArgs)
-        Dim selectedOrder As Order = DataGridOrder.SelectedItem
+    Public Sub SelectOrder(sender As Object, e As RoutedEventArgs)
+        selectedOrder = DataGridOrder.SelectedItem
         Dim orderForm As New orderSubsystemPageView
-        'Order Details
+        ''Order Details
         orderForm.OldId.Text = selectedOrder.Id
         orderForm.TxtBxCustomerName.Text = selectedOrder.Customer
         orderForm.TxtBxPhone.Text = selectedOrder.Phone
@@ -28,11 +30,19 @@ Public Class orderListView
         orderForm.TxtBxCourier.Text = selectedOrder.Courier
         orderForm.CmbBxStatus.Text = selectedOrder.Status
         orderForm.TxtBxDate.Text = selectedOrder.IssuedOn
-        'Order Item List
+        ''Order Item List
         viewModel.getOrderItemListByOrderIdFromModel(selectedOrder.Id)
         orderForm.DataGridOrderItem.ItemsSource = viewModel.orderItemList
+        orderForm.summaryOrderTotal()
         orderForm.Show()
         Me.Close()
+        'mark = 1
+    End Sub
+
+    Private Sub RemoveOrder(sender As Object, e As RoutedEventArgs)
+        Dim selectedOrder As Order = DataGridOrder.SelectedItem
+        viewModel.deleteOrderFromModel(selectedOrder)
+        viewModel.getOrderListFromModel
     End Sub
 
     'Testing input
