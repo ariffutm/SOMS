@@ -22,6 +22,9 @@
     <Compile Update="Views\profilePageView.xaml.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\salesPageView.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\userPageView.xaml.vb">
       <SubType>Code</SubType>
     </Compile>
@@ -46,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\profilePageView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\salesPageView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\userPageView.xaml">
