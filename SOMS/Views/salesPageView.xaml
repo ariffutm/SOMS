@@ -16,18 +16,19 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="70"/>
                     <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="110*"/>
-                    <ColumnDefinition Width="30*"/>
-                    <ColumnDefinition Width="10*"/>
                     <ColumnDefinition Width="90*"/>
                     <ColumnDefinition Width="30*"/>
                     <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="90*"/>
-                    <ColumnDefinition Width="150*"/>
+                    <ColumnDefinition Width="70*"/>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="70*"/>
+                    <ColumnDefinition Width="70*"/>
+                    <ColumnDefinition Width="70*"/>
                 </Grid.ColumnDefinitions>
                 <!--Row 1 Column 1 Sum-->
                 <Label Content="Sum (RM)" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Width="70"/>
-                <TextBox Grid.Row="0" Grid.Column="1" x:Name="CmbBxStatus" Margin="-10,5,0,3" Width="135" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                <TextBox Background="LightGray" IsReadOnly="True"  Grid.Row="0" Grid.Column="1" x:Name="CmbBxStatus" Margin="-10,5,0,3" Width="135" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
                 <!--Row 1 Column 2 Date From-->
                 <Label Content="From" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="3" Width="50"/>
                 <DatePicker Grid.Row="0" Grid.Column="5" x:Name="TxtBxDateFrom" Margin="-55,5,0,3" Width="110" HorizontalAlignment="Center">
@@ -53,7 +54,8 @@
                     </DatePicker.BorderBrush>
                 </DatePicker>
                 <!--Row 1 Column 4 Button-->
-                <Button Grid.Column="9" Width="70" x:Name="ButtonFind" Content="Find" Height="21" Margin="-200,6,0,0" Background="#FFDDDDDD" VerticalAlignment="Top"/>
+                <Button Grid.Column="9" Width="70" x:Name="ButtonFind" Content="Find" Height="21" Margin="-50,6,0,0" Background="#FFDDDDDD" VerticalAlignment="Top"/>
+                <Button Grid.Column="10" Width="70" x:Name="ButtonReport" Content="Report" Height="21" Margin="-50,6,0,0" Background="#FFDDDDDD" VerticalAlignment="Top"/>
             </Grid>
         </GroupBox>
         <!--<Grid/>-->

@@ -38,6 +38,10 @@ Public Class orderSubsystemPageView
             OldId.Text = ""
         End If
     End Sub
+    '''Handle Button - Clear Textbox
+    Private Sub ButtonCancel_Click(sender As Object, e As RoutedEventArgs) Handles ButtonCancel.Click
+        clearTextBox()
+    End Sub
     'UI Control
     '''Handle ComboBoxItem DropDown Events
     Private Sub selectOrderItemOption(sender As Object, e As EventArgs) Handles CmbBxItem.DropDownClosed
@@ -98,5 +102,26 @@ Public Class orderSubsystemPageView
             sum += Double.Parse(row.Total)
         Next
         TxtBxOrderTotal.Text = Format(sum, "0.00")
+    End Sub
+    ''Clear Textbox Function
+    Public Sub clearTextBox()
+        TxtBxCustomerName.Clear()
+        TxtBxPhone.Clear()
+        TxtBxEmail.Clear()
+        TxtBxAddress.Clear()
+        CmbBxPayment.Text = "Online Transfer"
+        TxtBxId.Clear()
+        TxtBxCourier.Clear()
+        CmbBxItem.Text = ""
+        TxtBxPrice.Clear()
+        TxtBxQuantity.Clear()
+        TxtBxTotal.Clear()
+        TxtBxOrderTotal.Clear()
+        OldId.Text = ""
+        orderModel.orderItemList.Clear()
+    End Sub
+
+    Private Sub ButtonBack_Click(sender As Object, e As RoutedEventArgs) Handles ButtonBack.Click
+        Me.Close()
     End Sub
 End Class

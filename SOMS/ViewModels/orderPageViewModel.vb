@@ -72,11 +72,9 @@ Namespace ViewModels
               .IssuedOn = FormatDateTime(data.GetValue("dateIssued"), DateFormat.ShortDate)
               }
             con.Close()
-            Testing(orderModel.Id)
         End Sub
         '''''Select Order's order items By Order ID
         Public Sub getOrderItemListByOrderIdFromModel(OrderId As String)
-            Testing("getOrderItemListByOrderIdFromModel")
             orderItemList.Clear()
             Dim sql As String = "Select * From [OrderItems] WHERE orderId = ?"
             Dim com As New OleDbCommand(sql, con)
@@ -175,13 +173,16 @@ Namespace ViewModels
         Public Sub deleteOrderFromModel(deleteOrder As Order)
             Select Case MsgBox("Remove this order with the ID: " + deleteOrder.Id, MsgBoxStyle.YesNo)
                 Case MsgBoxResult.Yes
-                    Dim sql As String = "DELETE FROM [Order] WHERE Id = ?"
-                    Dim com = New OleDbCommand(sql, con)
-                    'Open Connection
                     con.Open()
-                    com.Parameters.AddWithValue("@Id", deleteOrder.Id)
-                    com.ExecuteNonQuery()
-                    MessageBox.Show("Item successfully removed from the order.")
+                    Try
+                        Dim sql As String = "DELETE FROM [Order] WHERE Id = ?"
+                        Dim com = New OleDbCommand(sql, con)
+                        com.Parameters.AddWithValue("@Id", deleteOrder.Id)
+                        com.ExecuteNonQuery()
+                        MessageBox.Show("Item successfully removed from the order.")
+                    Catch
+                        MessageBox.Show("The order has order items listed. Please remove it first.")
+                    End Try
                     con.Close()
             End Select
         End Sub
@@ -217,7 +218,6 @@ Namespace ViewModels
 
         ''Sub-Function
         Public Function CheckExistOrderInDatabase(Id As String) As Boolean
-            Testing("CheckExistOrderInDatabase")
             Dim Status As New Boolean
             Dim sql As String = "Select * From [Order] WHERE Id = ?"
             Dim com As New OleDbCommand(sql, con)

@@ -17,7 +17,7 @@
             <!--For password-->
             <Button Content="User" Height="23" HorizontalAlignment="Left" Margin="100,204,0,0" Name="UserPage" VerticalAlignment="Top" Width="70" Click="UserPage_Click" />
             <Button Content="Profile" Height="23" HorizontalAlignment="Left" Margin="183,204,0,0" Name="ProfilePage" VerticalAlignment="Top" Width="70" Click="ProfilePage_Click" />
-            <Button Content="Reset" Height="23" HorizontalAlignment="Left" Margin="259,204,0,0" Name="button2" VerticalAlignment="Top" Width="70" Visibility="Hidden" />
+            <Button Content="Order" Height="23" HorizontalAlignment="Left" Margin="270,204,0,0" Name="OrderSubsystemPage" VerticalAlignment="Top" Width="70" Click="OrderSubsystemPage_Click" />
             <Button Content="Cancel" Height="23" HorizontalAlignment="Right" Margin="0,204,60,0" Name="button3" VerticalAlignment="Top" Width="70" Visibility="Hidden" />
         </Grid>
     </Grid>

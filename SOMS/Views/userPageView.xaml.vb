@@ -39,4 +39,8 @@ Partial Public Class userPageView
         End If
         Me.DataContext = seeAllUserList()
     End Sub
+
+    Private Sub ButtonCancel_Click(sender As Object, e As RoutedEventArgs) Handles ButtonCancel.Click
+        Me.Close()
+    End Sub
 End Class
