@@ -28,7 +28,7 @@
                 </Grid.ColumnDefinitions>
                 <!--Row 1 Column 1 Sum-->
                 <Label Content="Sum (RM)" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Width="70"/>
-                <TextBox Background="LightGray" IsReadOnly="True"  Grid.Row="0" Grid.Column="1" x:Name="CmbBxStatus" Margin="-10,5,0,3" Width="135" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                <TextBox Background="LightGray" IsReadOnly="True"  Grid.Row="0" Grid.Column="1" x:Name="TxtBxSum" Margin="-10,5,0,3" Width="135" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
                 <!--Row 1 Column 2 Date From-->
                 <Label Content="From" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="3" Width="50"/>
                 <DatePicker Grid.Row="0" Grid.Column="5" x:Name="TxtBxDateFrom" Margin="-55,5,0,3" Width="110" HorizontalAlignment="Center">
@@ -55,19 +55,19 @@
                 </DatePicker>
                 <!--Row 1 Column 4 Button-->
                 <Button Grid.Column="9" Width="70" x:Name="ButtonFind" Content="Find" Height="21" Margin="-50,6,0,0" Background="#FFDDDDDD" VerticalAlignment="Top"/>
-                <Button Grid.Column="10" Width="70" x:Name="ButtonReport" Content="Report" Height="21" Margin="-50,6,0,0" Background="#FFDDDDDD" VerticalAlignment="Top"/>
+                <Button Grid.Column="10" Width="100" x:Name="ButtonReport" Content="Generate Report" Height="21" Margin="-50,6,0,0" Background="#FFDDDDDD" VerticalAlignment="Top"/>
             </Grid>
         </GroupBox>
         <!--<Grid/>-->
         <StackPanel Height="300">
-            <DataGrid VerticalScrollBarVisibility="Auto" x:Name="DataGridOrder" AutoGenerateColumns="False"
+            <DataGrid VerticalScrollBarVisibility="Auto" x:Name="DataGridSales" AutoGenerateColumns="False"
             ItemsSource="{Binding salesList}" CanUserAddRows="False" Margin="10,10,10,10">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding Path=Id}"  Width="100"  IsReadOnly="True"/>
-                    <DataGridTextColumn Header="OrderID" Binding="{Binding Path=Customer}" Width="150"  IsReadOnly="True"/>
-                    <DataGridTextColumn Header="OrderItemID" Binding="{Binding Path=Phone}" Width="150"  IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Date" Binding="{Binding Path=Email}" Width="100"  IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Amount" Binding="{Binding Path=Method}" Width="100"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Order ID" Binding="{Binding Path=orderID}" Width="150"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Order Item ID" Binding="{Binding Path=orderItemId}" Width="150"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Date" Binding="{Binding Path=dateIssued}" Width="100"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Amount (RM)" Binding="{Binding Path=Amount}" Width="100"  IsReadOnly="True"/>
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>

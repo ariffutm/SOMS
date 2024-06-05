@@ -1,6 +1,8 @@
 ﻿Imports System.Collections.ObjectModel
 Imports System.Data
 Imports System.Data.OleDb
+Imports System.Diagnostics.Metrics
+Imports System.Net
 Imports SOMS.Models
 
 Namespace ViewModels
@@ -17,7 +19,7 @@ Namespace ViewModels
         'OrderListView
         Public Property orderList As New ObservableCollection(Of Order)
 
-        ''Singleton - To pass data between form 
+        'Singleton - To pass data between form 
         Public Shared Function GetInstance() As orderPageViewModel
             If _instance Is Nothing Then
                 _instance = New orderPageViewModel()
@@ -26,7 +28,7 @@ Namespace ViewModels
         End Function
 
         'UC005.1 Read
-        ''''Select order list
+        ''Select order list
         Public Sub getOrderListFromModel()
             orderList.Clear()
             Dim sql As String = "Select * From [Order]"
@@ -50,7 +52,7 @@ Namespace ViewModels
             End While
             con.Close()
         End Sub
-        ''''Select Order by ID
+        ''Select Order by ID
         Public Sub getOrderByIdFromModel(Id As String)
             Dim sql As String = "Select * From [Order] WHERE Id = ?"
             Dim com As New OleDbCommand(sql, con)
@@ -73,12 +75,35 @@ Namespace ViewModels
               }
             con.Close()
         End Sub
-        '''''Select Order's order items By Order ID
+        ''Select Order's order items By Order ID
         Public Sub getOrderItemListByOrderIdFromModel(OrderId As String)
             orderItemList.Clear()
             Dim sql As String = "Select * From [OrderItems] WHERE orderId = ?"
             Dim com As New OleDbCommand(sql, con)
             com.Parameters.AddWithValue("@orderId", OrderId)
+            con.Open()
+            'Exceute reader, then load into Model
+            data = com.ExecuteReader()
+            While data.Read()
+                Dim orderItemModel As New orderItem With {
+                  .ID = data.GetValue("Id").ToString,
+                  .OrderID = data.GetValue("orderId").ToString,
+                  .ItemID = data.GetValue("itemId").ToString,
+                  .ItemName = data.GetValue("itemName").ToString,
+                  .Quantity = data.GetValue("Quantity").ToString,
+                  .Price = data.GetValue("Price").ToString,
+                  .Total = data.GetValue("Total").ToString
+                }
+                orderItemList.Add(orderItemModel)
+            End While
+            con.Close()
+        End Sub
+        ''Select order items By Order ID and Item ID
+        Public Sub getOrderItemListByOrderIdAndItemIdFromModel(OrderId As String, itemId As String)
+            Dim sql As String = "Select * From [OrderItems] WHERE orderId = ? AND itemId = ?"
+            Dim com As New OleDbCommand(sql, con)
+            com.Parameters.AddWithValue("@orderId", OrderId)
+            com.Parameters.AddWithValue("@itemId", itemId)
             con.Open()
             'Exceute reader, then load into Model
             data = com.ExecuteReader()
@@ -110,10 +135,12 @@ Namespace ViewModels
                                                        ?,?,?,
                                                        ?,?,?)"
             Dim com = New OleDbCommand(sql, con)
-            'Try
             If CheckExistOrderInDatabase(Id) = True Then
+                'Add only new order item
                 addNewOrderItemIntoOrder(Id, orderItem, itemPrice, itemQuantity)
+                'Add new sales
             Else
+                'Add new order
                 con.Open()
                 com.Parameters.AddWithValue("@cust", Cust)
                 com.Parameters.AddWithValue("@phone", Phone)
@@ -126,8 +153,10 @@ Namespace ViewModels
                 com.Parameters.AddWithValue("@date", dateIssue)
                 com.ExecuteNonQuery()
                 con.Close()
-                addNewOrderItemIntoOrder(Id, orderItem, itemPrice, itemQuantity)
                 MessageBox.Show("Added New Order with ID: " + Id)
+                'Add new order item
+                addNewOrderItemIntoOrder(Id, orderItem, itemPrice, itemQuantity)
+                'Add new sales
             End If
             'Refresh order's Order Item List
             getOrderItemListByOrderIdFromModel(Id)
@@ -179,7 +208,7 @@ Namespace ViewModels
                         Dim com = New OleDbCommand(sql, con)
                         com.Parameters.AddWithValue("@Id", deleteOrder.Id)
                         com.ExecuteNonQuery()
-                        MessageBox.Show("Item successfully removed from the order.")
+                        MessageBox.Show("Order successfully removed from database.")
                     Catch
                         MessageBox.Show("The order has order items listed. Please remove it first.")
                     End Try
@@ -216,7 +245,7 @@ Namespace ViewModels
 
         End Sub
 
-        ''Sub-Function
+        'Sub-Function
         Public Function CheckExistOrderInDatabase(Id As String) As Boolean
             Dim Status As New Boolean
             Dim sql As String = "Select * From [Order] WHERE Id = ?"
@@ -233,7 +262,28 @@ Namespace ViewModels
             con.Close()
             Return Status
         End Function
-        'Testing input
+        ''Sales
+        '''Add new sales
+        Private Function AddSalesIntoDatabase(order As Order, orderItem As orderItem)
+            Dim sql As String = "INSERT INTO [Sales] (orderId, orderItemId, 
+                                                      dateIssued, Amount) VALUES 
+                                                      (?,?,?,?)"
+            Dim com = New OleDbCommand(sql, con)
+            con.Open()
+            com.Parameters.AddWithValue("@cust", Cust)
+            com.Parameters.AddWithValue("@phone", Phone)
+            com.Parameters.AddWithValue("@email", Email)
+            com.Parameters.AddWithValue("@address", Address)
+            com.Parameters.AddWithValue("@payment", Payment)
+            com.Parameters.AddWithValue("@id", Id)
+            com.Parameters.AddWithValue("@courier", Courier)
+            com.Parameters.AddWithValue("@status", Status)
+            com.Parameters.AddWithValue("@date", dateIssue)
+            com.ExecuteNonQuery()
+            con.Close()
+            MessageBox.Show("Added new sales into database.")
+        End Function
+        ''Testing input
         Private Sub Testing(input As String)
             MessageBox.Show(input)
         End Sub

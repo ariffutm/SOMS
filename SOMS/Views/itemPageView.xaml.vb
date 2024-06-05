@@ -1,15 +1,14 @@
 ﻿Imports SOMS.Models
 Imports SOMS.ViewModels
 Public Class itemPageView
-    Dim viewModel As New itemPageViewModel
+    Dim viewModel = itemPageViewModel.GetInstance
 
     Public Sub New()
         InitializeComponent()
         Me.DataContext = seeAllItemList()
     End Sub
     'Read item list from Model
-    Private Function seeAllItemList() As itemPageViewModel
-        Dim viewModel As New itemPageViewModel
+    Public Function seeAllItemList() As itemPageViewModel
         viewModel.getAllItemListFromModel()
         Return viewModel
     End Function
@@ -38,13 +37,22 @@ Public Class itemPageView
         TxtBxStock.Text = item.Stock
     End Sub
     Private Sub sendItemUpdatedByID(sender As Object, e As RoutedEventArgs) Handles ButtonUpdate.Click
-        viewModel.updateItemByIDToModel(OldId.Text, TxtBxId.Text, TxtBxName.Text, TxtBxPrice.Text, TxtBxDescription.Text, TxtBxStock.Text)
-        Me.DataContext = seeAllItemList()
+        If String.IsNullOrWhiteSpace(OldId.Text) Then
+            MessageBox.Show("Please select the item in the list to update.")
+        Else
+            viewModel.updateItemByIDToModel(OldId.Text, TxtBxId.Text, TxtBxName.Text, TxtBxPrice.Text, TxtBxDescription.Text, TxtBxStock.Text)
+            OldId.Text = ""
+            Me.DataContext = seeAllItemList()
+        End If
     End Sub
-
 
     'Testing
     Private Sub Testing(input As String)
         MessageBox.Show(input)
     End Sub
+
+    'Private Sub ButtonCancel_Click(sender As Object, e As RoutedEventArgs) Handles ButtonCancel.Click
+    '    Dim form As New orderSubsystemPageView
+    '    form.TabControl.SelectedIndex = 1
+    'End Sub
 End Class

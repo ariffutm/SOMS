@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SOMS"
         mc:Ignorable="d"
-        Title="orderSubsystemPageView" Height="790" Width="820">
-    <TabControl Margin="0,0,0,-6">
+        Title="orderSubsystemPageView" Height="790" Width="1000">
+    <TabControl x:Name="TabControl" Margin="0,0,0,-6">
         <!--Order Page-->
         <TabItem Header="Order">
             <StackPanel Orientation="Vertical">
@@ -137,7 +137,7 @@
                 <StackPanel Height="40" Orientation="Horizontal" HorizontalAlignment="Right">
                     <Button x:Name="ButtonAdd" Content="Add Order Item" Height="30" Width="105" Margin="5,0,5,0" IsCancel="True"/>
                     <Button x:Name="ButtonUpdate" Content="Update Order Detail" Height="30" Width="124"/>
-                    <Button x:Name="ButtonCancel" Content="Clear Textbox" Height="30" Width="105" Margin="5,0,10,0"/>
+                    <Button x:Name="ButtonCancel" Content="Clear Form" Height="30" Width="105" Margin="5,0,10,0"/>
                     <Button x:Name="ButtonBack" Content="To Dashboard" Height="30" Width="105" Margin="-3,0,10,0"/>
                 </StackPanel>
                 <!--<Grid Panel/>-->

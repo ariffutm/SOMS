@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SOMS"
              mc:Ignorable="d" 
-             d:DesignHeight="650" d:DesignWidth="800">
+             d:DesignHeight="650" d:DesignWidth="1000">
     <StackPanel Orientation="Vertical">
         <GroupBox Header="Item Form" Margin="10" BorderBrush="#FF0C0D0E">
             <Grid Height="180">
@@ -50,9 +50,9 @@
             </Grid>
         </GroupBox>
         <StackPanel Height="40" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="ButtonAdd" Content="Add" Height="30" Width="80" Margin="5,0,5,0"/>
-            <Button x:Name="ButtonUpdate" Content="Update" Height="30" Width="80"/>
-            <Button x:Name="ButtonCancel" Content="Cancel" Height="30" Width="80" Margin="5,0,10,0"/>
+            <Button x:Name="ButtonAdd" Content="Add" Height="30" Width="80" Margin="0,0,5,0"/>
+            <Button x:Name="ButtonUpdate" Content="Update" Height="30" Width="80" Margin="0,0,5,0"/>
+            <!--<Button x:Name="ButtonCancel" Content="Cancel" Height="30" Width="80" Margin="5,0,10,0"/>-->
         </StackPanel>
         <StackPanel Height="270">
             <DataGrid VerticalScrollBarVisibility="Auto" x:Name="DataGridItem" AutoGenerateColumns="False"
@@ -63,6 +63,7 @@
                     <DataGridTextColumn Header="Price (RM)" Binding="{Binding Path=Price}" Width="70"  IsReadOnly="True"/>
                     <DataGridTextColumn Header="Description" Binding="{Binding Path=Description}" Width="300"  IsReadOnly="True"/>
                     <DataGridTextColumn Header="Stock" Binding="{Binding Path=Stock}" Width="100" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Balance" Binding="{Binding Path=Balance}" Width="100" IsReadOnly="True"/>
                     <DataGridTemplateColumn Width="50">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>

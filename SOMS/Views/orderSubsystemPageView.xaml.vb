@@ -3,7 +3,7 @@ Imports SOMS.ViewModels
 
 Public Class orderSubsystemPageView
     Dim orderModel = orderPageViewModel.GetInstance
-    Dim itemModel As New itemPageViewModel
+    Dim itemModel = itemPageViewModel.GetInstance
 
     Public Sub New()
         InitializeComponent()
@@ -17,6 +17,7 @@ Public Class orderSubsystemPageView
                                     TxtBxCourier.Text, CmbBxStatus.Text, TxtBxDate.Text,
                                     itemModel.selectedItem, TxtBxPrice.Text, TxtBxQuantity.Text)
         summaryOrderTotal()
+        Dim form As New itemPageView
     End Sub
     'UC005 Update Order
     '''DataGridOrderItem Delete Button Column Handler - Delete order Item
@@ -25,6 +26,7 @@ Public Class orderSubsystemPageView
         orderModel.deleteOrderItemFromModel(orderItem)
         Me.DataContext = orderModel
         summaryOrderTotal()
+        Dim form As New itemPageView
     End Sub
     '''Update Order Details Button Handler - Update order details
     Private Sub sendOrderUpdateDetailsByID(sender As Object, e As RoutedEventArgs) Handles ButtonUpdate.Click
@@ -42,6 +44,7 @@ Public Class orderSubsystemPageView
     Private Sub ButtonCancel_Click(sender As Object, e As RoutedEventArgs) Handles ButtonCancel.Click
         clearTextBox()
     End Sub
+
     'UI Control
     '''Handle ComboBoxItem DropDown Events
     Private Sub selectOrderItemOption(sender As Object, e As EventArgs) Handles CmbBxItem.DropDownClosed
@@ -62,7 +65,7 @@ Public Class orderSubsystemPageView
     ''<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>
     'Populate ComboBoxItem
     Private Sub loadItemIntoComboboxItem()
-        Dim itemModel As New itemPageViewModel
+        'Dim itemModel As New itemPageViewModel
         itemModel.getAllItemListFromModel()
         CmbBxItem.ItemsSource = itemModel.itemList
     End Sub
