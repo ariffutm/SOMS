@@ -64,8 +64,9 @@
             ItemsSource="{Binding salesList}" CanUserAddRows="False" Margin="10,10,10,10">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding Path=Id}"  Width="100"  IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Order ID" Binding="{Binding Path=orderID}" Width="150"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Order ID" Binding="{Binding Path=orderId}" Width="150"  IsReadOnly="True"/>
                     <DataGridTextColumn Header="Order Item ID" Binding="{Binding Path=orderItemId}" Width="150"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Item Name" Binding="{Binding Path=itemName}" Width="150"  IsReadOnly="True"/>
                     <DataGridTextColumn Header="Date" Binding="{Binding Path=dateIssued}" Width="100"  IsReadOnly="True"/>
                     <DataGridTextColumn Header="Amount (RM)" Binding="{Binding Path=Amount}" Width="100"  IsReadOnly="True"/>
                 </DataGrid.Columns>

@@ -17,7 +17,7 @@ Public Class orderSubsystemPageView
                                     TxtBxCourier.Text, CmbBxStatus.Text, TxtBxDate.Text,
                                     itemModel.selectedItem, TxtBxPrice.Text, TxtBxQuantity.Text)
         summaryOrderTotal()
-        Dim form As New itemPageView
+        RefreshData()
     End Sub
     'UC005 Update Order
     '''DataGridOrderItem Delete Button Column Handler - Delete order Item
@@ -26,7 +26,7 @@ Public Class orderSubsystemPageView
         orderModel.deleteOrderItemFromModel(orderItem)
         Me.DataContext = orderModel
         summaryOrderTotal()
-        Dim form As New itemPageView
+        RefreshData()
     End Sub
     '''Update Order Details Button Handler - Update order details
     Private Sub sendOrderUpdateDetailsByID(sender As Object, e As RoutedEventArgs) Handles ButtonUpdate.Click
@@ -39,6 +39,7 @@ Public Class orderSubsystemPageView
                                                 OldId.Text)
             OldId.Text = ""
         End If
+        RefreshData()
     End Sub
     '''Handle Button - Clear Textbox
     Private Sub ButtonCancel_Click(sender As Object, e As RoutedEventArgs) Handles ButtonCancel.Click
@@ -126,5 +127,10 @@ Public Class orderSubsystemPageView
 
     Private Sub ButtonBack_Click(sender As Object, e As RoutedEventArgs) Handles ButtonBack.Click
         Me.Close()
+    End Sub
+    ''To refresh Views' display data
+    Private Sub RefreshData()
+        Dim formitem As New itemPageView
+        Dim formSales As New salesPageView
     End Sub
 End Class

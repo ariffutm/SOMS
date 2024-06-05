@@ -15,10 +15,10 @@
             </Grid.RowDefinitions>
             <TextBlock Height="20" HorizontalAlignment="Left" Margin="67,0,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="247"  OpacityMask="Crimson" Foreground="#FFE5572C" />
             <!--For password-->
-            <Button Content="User" Height="23" HorizontalAlignment="Left" Margin="100,204,0,0" Name="UserPage" VerticalAlignment="Top" Width="70" Click="UserPage_Click" />
-            <Button Content="Profile" Height="23" HorizontalAlignment="Left" Margin="183,204,0,0" Name="ProfilePage" VerticalAlignment="Top" Width="70" Click="ProfilePage_Click" />
-            <Button Content="Order" Height="23" HorizontalAlignment="Left" Margin="270,204,0,0" Name="OrderSubsystemPage" VerticalAlignment="Top" Width="70" Click="OrderSubsystemPage_Click" />
-            <Button Content="Cancel" Height="23" HorizontalAlignment="Right" Margin="0,204,60,0" Name="button3" VerticalAlignment="Top" Width="70" Visibility="Hidden" />
+            <Button Content="User" Height="23" HorizontalAlignment="Left" Margin="50,204,0,0" Name="UserPage" VerticalAlignment="Top" Width="70" Click="UserPage_Click" />
+            <Button Content="Profile" Height="23" HorizontalAlignment="Left" Margin="150,204,0,0" Name="ProfilePage" VerticalAlignment="Top" Width="70" Click="ProfilePage_Click" />
+            <Button Content="Order" Height="23" HorizontalAlignment="Left" Margin="250,204,0,0" Name="OrderSubsystemPage" VerticalAlignment="Top" Width="70" Click="OrderSubsystemPage_Click" />
+            <Button Content="Sales" Height="23" HorizontalAlignment="Right" Margin="0,204,40,0" Name="SalesPage" VerticalAlignment="Top" Width="70" />
         </Grid>
     </Grid>
 </Window>

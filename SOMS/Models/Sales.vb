@@ -5,6 +5,7 @@
         Private _orderId As String
         Private _total As String
         Private _orderItemId As String
+        Private _itemName As String
         Private _dateIssued As String
 
         Public Property Id As String
@@ -40,6 +41,15 @@
             End Get
             Set(ByVal value As String)
                 _orderItemId = value
+            End Set
+        End Property
+
+        Public Property itemName As String
+            Get
+                Return _itemName
+            End Get
+            Set(ByVal value As String)
+                _itemName = value
             End Set
         End Property
 

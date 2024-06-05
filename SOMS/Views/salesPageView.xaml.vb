@@ -7,14 +7,19 @@ Public Class salesPageView
     Public Sub New()
         InitializeComponent()
         Me.DataContext = viewSales()
+        TxtBxSum.Text = Format(viewModel.sum, "0.00")
     End Sub
-    'UC001 - Read sales list from Model
+    'UC001 - Read
+    ''All sales list from Model
     Public Function viewSales() As salesPageViewModel
         viewModel.getAllSalesFromModel()
-        summarySalesTotal()
         Return viewModel
     End Function
-
+    ''Sales List By Date
+    Private Sub ButtonFind_Click(sender As Object, e As RoutedEventArgs) Handles ButtonFind.Click
+        viewModel.filterDate(TxtBxDateFrom.Text, TxtBxDateTo.Text)
+        summarySalesTotal()
+    End Sub
     'UI Control
     ''Sales Total Calculation
     Public Sub summarySalesTotal()

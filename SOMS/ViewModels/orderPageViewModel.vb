@@ -99,7 +99,7 @@ Namespace ViewModels
             con.Close()
         End Sub
         ''Select order items By Order ID and Item ID
-        Public Sub getOrderItemListByOrderIdAndItemIdFromModel(OrderId As String, itemId As String)
+        Public Sub getOrderItemByOrderIdAndItemIdFromModel(OrderId As String, itemId As String)
             Dim sql As String = "Select * From [OrderItems] WHERE orderId = ? AND itemId = ?"
             Dim com As New OleDbCommand(sql, con)
             com.Parameters.AddWithValue("@orderId", OrderId)
@@ -107,18 +107,14 @@ Namespace ViewModels
             con.Open()
             'Exceute reader, then load into Model
             data = com.ExecuteReader()
-            While data.Read()
-                Dim orderItemModel As New orderItem With {
-                  .ID = data.GetValue("Id").ToString,
-                  .OrderID = data.GetValue("orderId").ToString,
-                  .ItemID = data.GetValue("itemId").ToString,
-                  .ItemName = data.GetValue("itemName").ToString,
-                  .Quantity = data.GetValue("Quantity").ToString,
-                  .Price = data.GetValue("Price").ToString,
-                  .Total = data.GetValue("Total").ToString
-                }
-                orderItemList.Add(orderItemModel)
-            End While
+            data.Read()
+            orderItemModel.ID = data.GetValue("Id").ToString
+            orderItemModel.OrderID = data.GetValue("orderId").ToString
+            orderItemModel.ItemID = data.GetValue("itemId").ToString
+            orderItemModel.ItemName = data.GetValue("itemName").ToString
+            orderItemModel.Quantity = data.GetValue("Quantity").ToString
+            orderItemModel.Price = data.GetValue("Price").ToString
+            orderItemModel.Total = data.GetValue("Total").ToString
             con.Close()
         End Sub
 
@@ -139,6 +135,9 @@ Namespace ViewModels
                 'Add only new order item
                 addNewOrderItemIntoOrder(Id, orderItem, itemPrice, itemQuantity)
                 'Add new sales
+                ''Get orderItem 
+                getOrderItemByOrderIdAndItemIdFromModel(Id, orderItem.ID)
+                AddSalesIntoDatabase(Id, dateIssue, orderItemModel)
             Else
                 'Add new order
                 con.Open()
@@ -157,6 +156,9 @@ Namespace ViewModels
                 'Add new order item
                 addNewOrderItemIntoOrder(Id, orderItem, itemPrice, itemQuantity)
                 'Add new sales
+                ''Get orderItem 
+                getOrderItemByOrderIdAndItemIdFromModel(Id, orderItem.ID)
+                AddSalesIntoDatabase(Id, dateIssue, orderItemModel)
             End If
             'Refresh order's Order Item List
             getOrderItemListByOrderIdFromModel(Id)
@@ -264,25 +266,19 @@ Namespace ViewModels
         End Function
         ''Sales
         '''Add new sales
-        Private Function AddSalesIntoDatabase(order As Order, orderItem As orderItem)
-            Dim sql As String = "INSERT INTO [Sales] (orderId, orderItemId, 
-                                                      dateIssued, Amount) VALUES 
-                                                      (?,?,?,?)"
+        Private Sub AddSalesIntoDatabase(orderId As String, _date As String, orderItem As orderItem)
+            Dim sql As String = "INSERT INTO [Sales] (orderId, orderItemId, itemName, dateIssued, Amount) VALUES 
+                                                      (?,?,?,?,?)"
             Dim com = New OleDbCommand(sql, con)
             con.Open()
-            com.Parameters.AddWithValue("@cust", Cust)
-            com.Parameters.AddWithValue("@phone", Phone)
-            com.Parameters.AddWithValue("@email", Email)
-            com.Parameters.AddWithValue("@address", Address)
-            com.Parameters.AddWithValue("@payment", Payment)
-            com.Parameters.AddWithValue("@id", Id)
-            com.Parameters.AddWithValue("@courier", Courier)
-            com.Parameters.AddWithValue("@status", Status)
-            com.Parameters.AddWithValue("@date", dateIssue)
+            com.Parameters.AddWithValue("@orderId", orderId)
+            com.Parameters.AddWithValue("@orderItemId", orderItem.ID)
+            com.Parameters.AddWithValue("@itemName", orderItem.ItemName)
+            com.Parameters.AddWithValue("@dateIssued", _date)
+            com.Parameters.AddWithValue("@amount", orderItem.Total)
             com.ExecuteNonQuery()
             con.Close()
-            MessageBox.Show("Added new sales into database.")
-        End Function
+        End Sub
         ''Testing input
         Private Sub Testing(input As String)
             MessageBox.Show(input)

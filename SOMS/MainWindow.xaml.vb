@@ -15,4 +15,9 @@ Public Class MainWindow
         Dim orderSubsystemPage As orderSubsystemPageView = New orderSubsystemPageView()
         orderSubsystemPage.Show()
     End Sub
+
+    Private Sub SalesPage_Click(sender As Object, e As RoutedEventArgs) Handles SalesPage.Click
+        Dim salesPage As salesPageView = New salesPageView()
+        salesPage.Show()
+    End Sub
 End Class
