@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SOMS"
         mc:Ignorable="d"
-        Title="userPageView" Height="550" Width="800">
+        Title="Manage User" Height="550" Width="800">
     <StackPanel Orientation="Vertical">
         <GroupBox Header="User Form" Margin="10">
             <Grid Height="150">

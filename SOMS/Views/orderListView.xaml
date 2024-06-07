@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SOMS"
         mc:Ignorable="d"
-        Title="orderList" Height="450" Width="1500">
+        Title="List of Order" Height="450" Width="1500">
     <Grid>
         <DataGrid VerticalScrollBarVisibility="Auto" x:Name="DataGridOrder" AutoGenerateColumns="False"
          ItemsSource="{Binding orderList}" CanUserAddRows="False" Margin="10,10,10,10">

@@ -17,6 +17,8 @@ C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\loginPageV
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\orderListView.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\orderSubsystemPageView.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\profilePageView.g.vb
+C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\Receipt.g.vb
+C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\salesPageView.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\userPageView.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Application.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.vb
@@ -27,6 +29,8 @@ C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\itemPageVi
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\orderListView.baml
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\orderSubsystemPageView.baml
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\profilePageView.baml
+C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\Receipt.baml
+C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\salesPageView.baml
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\userPageView.baml
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\SOMS.g.resources
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\SOMS.GeneratedMSBuildEditorConfig.editorconfig
@@ -42,5 +46,3 @@ C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\SOMS.genruntimec
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\ref\SOMS.dll
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\Window1.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\Window1.baml
-C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\salesPageView.g.vb
-C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\salesPageView.baml

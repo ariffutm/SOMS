@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\viewmodels\\salespageviewmodel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\viewmodels\\salespageviewmodel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\views\\receipt.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\views\\receipt.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\views\\salespageview.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\views\\salespageview.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\views\\receipt.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\views\\receipt.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\views\\salespageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\views\\salespageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\views\\ordersubsystempageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\views\\ordersubsystempageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|c:\\users\\victus\\source\\repos\\soms\\soms\\views\\ordersubsystempageview.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4560266C-D129-4CA9-80FC-BDB78A9CADD1}|SOMS\\SOMS.vbproj|solutionrelative:soms\\views\\ordersubsystempageview.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,39 +31,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "salesPageView.xaml",
-              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\salesPageView.xaml",
-              "RelativeDocumentMoniker": "SOMS\\Views\\salesPageView.xaml",
-              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\salesPageView.xaml",
-              "RelativeToolTip": "SOMS\\Views\\salesPageView.xaml",
+              "Title": "orderSubsystemPageView.xaml",
+              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\orderSubsystemPageView.xaml",
+              "RelativeDocumentMoniker": "SOMS\\Views\\orderSubsystemPageView.xaml",
+              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\orderSubsystemPageView.xaml",
+              "RelativeToolTip": "SOMS\\Views\\orderSubsystemPageView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-05T03:13:30.918Z",
+              "WhenOpened": "2024-06-07T10:04:03.63Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "salesPageView.xaml.vb",
-              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\salesPageView.xaml.vb",
-              "RelativeDocumentMoniker": "SOMS\\Views\\salesPageView.xaml.vb",
-              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\salesPageView.xaml.vb",
-              "RelativeToolTip": "SOMS\\Views\\salesPageView.xaml.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAlwBQAAAAbAAAA",
+              "Title": "Receipt.xaml.vb",
+              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\Receipt.xaml.vb",
+              "RelativeDocumentMoniker": "SOMS\\Views\\Receipt.xaml.vb",
+              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\Receipt.xaml.vb",
+              "RelativeToolTip": "SOMS\\Views\\Receipt.xaml.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-05T02:17:10.441Z",
+              "WhenOpened": "2024-06-07T01:51:16.748Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "salesPageViewModel.vb",
-              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\ViewModels\\salesPageViewModel.vb",
-              "RelativeDocumentMoniker": "SOMS\\ViewModels\\salesPageViewModel.vb",
-              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\ViewModels\\salesPageViewModel.vb",
-              "RelativeToolTip": "SOMS\\ViewModels\\salesPageViewModel.vb",
-              "ViewState": "AQIAAG8AAAAAAAAAAIAwwI4AAAAiAAAA",
+              "Title": "Receipt.xaml",
+              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\Receipt.xaml",
+              "RelativeDocumentMoniker": "SOMS\\Views\\Receipt.xaml",
+              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\Receipt.xaml",
+              "RelativeToolTip": "SOMS\\Views\\Receipt.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-07T00:59:55.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "orderSubsystemPageView.xaml.vb",
+              "DocumentMoniker": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\orderSubsystemPageView.xaml.vb",
+              "RelativeDocumentMoniker": "SOMS\\Views\\orderSubsystemPageView.xaml.vb",
+              "ToolTip": "C:\\Users\\VICTUS\\source\\repos\\SOMS\\SOMS\\Views\\orderSubsystemPageView.xaml.vb",
+              "RelativeToolTip": "SOMS\\Views\\orderSubsystemPageView.xaml.vb",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAswJwAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-05T02:57:43.145Z",
+              "WhenOpened": "2024-06-07T01:25:01.898Z",
               "EditorCaption": ""
             }
           ]

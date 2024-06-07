@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SOMS"
         mc:Ignorable="d"
-        Title="salesPageView" Height="450" Width="900">
+        Title="Sales Page" Height="450" Width="900">
     <StackPanel Height="450">
         <!--<First GroupBox/>-->
         <GroupBox Header="Search" Margin="4,4,4,4" Width="870" Height="55" BorderBrush="#FF0C0D0E">
