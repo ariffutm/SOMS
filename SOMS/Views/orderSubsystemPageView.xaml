@@ -154,9 +154,9 @@
                  ItemsSource="{Binding orderItemList}" CanUserAddRows="False" Height="310" Margin="10">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Name" Binding="{Binding Path=ItemName}"  Width="100"  IsReadOnly="True"/>
-                        <DataGridTextColumn Header="Quantity (RM)" Binding="{Binding Path=Quantity}" Width="100"  IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Quantity" Binding="{Binding Path=Quantity}" Width="100"  IsReadOnly="True"/>
                         <DataGridTextColumn Header="Price (RM)" Binding="{Binding Path=Price}" Width="100"  IsReadOnly="True"/>
-                        <DataGridTextColumn Header="Total (RM)" Binding="{Binding Path=Total}" Width="100"  IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Amount (RM)" Binding="{Binding Path=Total}" Width="100"  IsReadOnly="True"/>
                         <DataGridTemplateColumn Width="50">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>

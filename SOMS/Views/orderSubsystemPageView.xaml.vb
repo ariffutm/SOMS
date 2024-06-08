@@ -1,4 +1,5 @@
-﻿Imports System.Windows.Interop
+﻿Imports System.Collections.ObjectModel
+Imports System.Windows.Interop
 Imports SOMS.Models
 Imports SOMS.ViewModels
 
@@ -142,12 +143,13 @@ Public Class orderSubsystemPageView
     ''Display Order List Page Function
     Private Sub showOrderListView()
         Dim view As New orderListView
-        view.Show
+        view.Show()
     End Sub
     ''Display Receipt Data Function
     Private Sub makeReceipt()
         Dim receipt As New Receipt
         Dim Address = getAddress(TxtBxAddress.Text)
+        Dim print As New PrintDialog()
 
         receipt.Customer.Text = TxtBxCustomerName.Text
         receipt.Phone.Text = TxtBxPhone.Text
@@ -157,7 +159,13 @@ Public Class orderSubsystemPageView
         receipt.DateValue.Text = TxtBxDate.Text
         receipt.TypeValue.Text = CmbBxPayment.Text
         receipt.TrackValue.Text = TxtBxCourier.Text
+        receipt.DataGridOrderItem.ItemsSource = DataGridOrderItem.ItemsSource
+        receipt.TotalValue.Text = TxtBxOrderTotal.Text
         receipt.Show()
+
+        'If print.ShowDialog() = True Then
+        print.PrintVisual(receipt, "Receipt")
+        'End If
     End Sub
     ''Display Receipt Data Function
     Private Sub Testing(input As String)
@@ -169,16 +177,13 @@ Public Class orderSubsystemPageView
         Dim addressArray(1) As String
 
         For cycle As Integer = 0 To Input.Length - 1
-            Testing(Input(cycle))
             If cycle < (Input.Count / 2) Then
                 addressArray(0) += Input(cycle)
                 addressArray(0) += ", "
             Else
                 addressArray(1) += Input(cycle)
-                'addressArray(0) += ", "
             End If
         Next
-        Testing(addressArray(0) + addressArray(1))
         Return addressArray
     End Function
 End Class

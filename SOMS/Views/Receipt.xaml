@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SOMS"
         mc:Ignorable="d"
-        Title="Receipt" Height="750" Width="810">
+        Title="Receipt" Height="550" Width="620">
     <Grid>
         <StackPanel Orientation="Vertical">
             <!--<First GroupBox/>-->
@@ -16,25 +16,22 @@
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
                     <ColumnDefinition Width="70"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="210*"/>
-                    <ColumnDefinition Width="70*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="300*"/>
+                    <ColumnDefinition Width="330"/>
                 </Grid.ColumnDefinitions>
                 <!--Row 1 -->
                 <!--logo-->
-                <Image Height="50" Width="170" HorizontalAlignment="Left" Grid.ColumnSpan="3" Grid.RowSpan="2" Grid.Row="0" Margin="3,0,0,0">
+                <Image Height="50" Width="170" HorizontalAlignment="Left" Grid.RowSpan="2" Grid.Row="0" Margin="3,0,0,0">
                     <Image.Source>
                         <BitmapImage DecodePixelWidth="300" UriSource="../Resources/logo.png" />
                     </Image.Source>
                 </Image>
                 <!--Receipt-->
-                <Label Content="RECEIPT" HorizontalAlignment="Left" VerticalContentAlignment="Center" Grid.Row="0" Grid.RowSpan="2" Grid.Column="5" Width="86" FontSize="19" FontWeight="Bold" Margin="279,0,0,0" FontFamily="Segoe UI Semibold"/>
+                <Label Content="RECEIPT" HorizontalAlignment="Right" VerticalContentAlignment="Center" Grid.Row="0" Grid.RowSpan="2" Grid.Column="2" Width="86" FontSize="19" FontWeight="Bold" Margin="0,0,0,0" FontFamily="Segoe UI Semibold"/>
             </Grid>
             <!--<Second GroupBox/>-->
-            <GroupBox Header="Bill To" Margin="1,1,1,1" Width="785" Height="95" FontFamily="Segoe UI Semibold">
+            <GroupBox Header="Bill To" Margin="1,1,1,1" Height="95" FontFamily="Segoe UI Semibold">
                 <Grid Height="75">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"/>
@@ -44,10 +41,9 @@
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="30"/>
-                        <ColumnDefinition Width="50*"/>
-                        <ColumnDefinition Width="490*"/>
-                        <ColumnDefinition Width="40*"/>
-                        <ColumnDefinition Width="180*"/>
+                        <ColumnDefinition Width="350"/>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="200"/>
                     </Grid.ColumnDefinitions>
                     <!--Row 1 
                              Name-->
@@ -55,103 +51,79 @@
                     Grid.Row="0" Grid.Column="0" Width="300" FontSize="11" FontFamily="Segoe UI Light"/>
                     <!--Column 2 
                              Reference-->
-                    <TextBlock x:Name="Ref" Text="REF#" HorizontalAlignment="Left" 
-                    Grid.Row="0" Grid.Column="3" Width="40"/>
-                             <!--REF Value-->
-                    <TextBlock x:Name="RefValue" Text="Value" HorizontalAlignment="Right" Margin="0,0,0,0"
-                    Grid.Row="0" Grid.Column="4" Width="170" FontSize="11" FontFamily="Segoe UI Light"/>
+                    <TextBlock x:Name="Ref" Text="REF#" HorizontalAlignment="Center" 
+                    Grid.Row="0" Grid.Column="2" Width="40"/>
+                    <!--REF Value-->
+                    <TextBlock x:Name="RefValue" Text="Value" HorizontalAlignment="Left"
+                    Grid.Row="0" Grid.Column="3" Width="171" FontSize="11" FontFamily="Segoe UI Light"/>
                     <!--Row 2
                              Phone-->
-                    <TextBlock Text="Telp:" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="0" Width="30" 
+                    <TextBlock Text="Telp:" HorizontalAlignment="Center" Grid.Row="1" Width="30" 
                     FontSize="11" FontFamily="Segoe UI SemiBold"/>
-                    <TextBlock Grid.Column="1" Grid.ColumnSpan="2" x:Name="Phone" Text="Phone" Margin="0,1,1,0" HorizontalAlignment="Left"
-                    Grid.Row="1" Width="300" FontSize="11" FontFamily="Segoe UI Light"/>
+                    <TextBlock Grid.Column="1" Grid.ColumnSpan="3" x:Name="Phone" Text="Phone" Margin="0,1,0,0" HorizontalAlignment="Left"
+                    Grid.Row="1" Width="200" FontSize="11" FontFamily="Segoe UI Light"/>
                     <!--Column 2
                              Date-->
-                    <TextBlock x:Name="Date" Text="DATE" HorizontalAlignment="Left" 
-                    Grid.Row="1" Grid.Column="3" Width="40"/>
-                         <!--Date Value-->
-                    <TextBlock x:Name="DateValue" Text="Value" HorizontalAlignment="Right" Margin="0,0,0,0"
-                    Grid.Row="1" Grid.Column="4" Width="170" FontSize="11" FontFamily="Segoe UI Light"/>
+                    <TextBlock x:Name="Date" Text="DATE" HorizontalAlignment="Center" 
+                    Grid.Row="1" Grid.Column="2" Width="40"/>
+                    <!--Date Value-->
+                    <TextBlock x:Name="DateValue" Text="Value" HorizontalAlignment="Left"
+                    Grid.Row="1" Grid.Column="3" Width="171" FontSize="11" FontFamily="Segoe UI Light"/>
                     <!--Row 3 
                             Address-->
                     <TextBlock Grid.ColumnSpan="3"  x:Name="Address1" Text="Address" HorizontalAlignment="Left"  
-                    Grid.Row="2" Width="590" FontSize="11" FontFamily="Segoe UI Light"/>
+                    Grid.Row="2" Width="370" FontSize="11" FontFamily="Segoe UI Light" Grid.Column="0"/>
                     <!--Column 2 
                              Method-->
-                    <TextBlock x:Name="Method" Text="TYPE" HorizontalAlignment="Left" 
-                    Grid.Row="2" Grid.Column="3" Width="40"/>
-                        <!--Type Value-->
-                    <TextBlock x:Name="TypeValue" Text="Value" HorizontalAlignment="Right" Margin="0,0,0,0"
-                    Grid.Row="2" Grid.Column="4" Width="170" FontSize="11" FontFamily="Segoe UI Light"/>
+                    <TextBlock x:Name="Method" Text="TYPE" HorizontalAlignment="Center" 
+                    Grid.Row="2" Grid.Column="2" Width="40"/>
+                    <!--Type Value-->
+                    <TextBlock x:Name="TypeValue" Text="Value" HorizontalAlignment="Left"
+                    Grid.Row="2" Grid.Column="3" Width="171" FontSize="11" FontFamily="Segoe UI Light"/>
                     <!--Row 4 
                             Address-->
                     <TextBlock Grid.ColumnSpan="3"  x:Name="Address2" Text="Address"  HorizontalAlignment="Left"  
-                    Grid.Row="3" Width="590" FontSize="11" FontFamily="Segoe UI Light"/>
+                    Grid.Row="3" Width="370" FontSize="11" FontFamily="Segoe UI Light" Grid.Column="0"/>
                     <!--Column 2 
                              Courier-->
-                    <TextBlock x:Name="Track" Text="TRACK" HorizontalAlignment="Left" 
-                     Grid.Row="3" Grid.Column="3" Width="40"/>
+                    <TextBlock x:Name="Track" Text="TRACK" HorizontalAlignment="Center" 
+                     Grid.Row="3" Grid.Column="2" Width="40"/>
                     <!--Type Value-->
-                    <TextBlock x:Name="TrackValue" Text="Value" HorizontalAlignment="Right" Margin="0,0,0,0"
-                    Grid.Row="3" Grid.Column="4" Width="170" FontSize="11" FontFamily="Segoe UI Light"/>
-
+                    <TextBlock x:Name="TrackValue" Text="Value" HorizontalAlignment="Left"
+                    Grid.Row="3" Grid.Column="3" Width="171" FontSize="11" FontFamily="Segoe UI Light"/>
                 </Grid>
             </GroupBox>
+            <!--<Grid Panel/>-->
+            <DataGrid VerticalScrollBarVisibility="Auto" x:Name="DataGridOrderItem" AutoGenerateColumns="False"
+                 CanUserAddRows="False" Margin="5" FontFamily="Segoe UI Semibold">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ITEM" Binding="{Binding Path=ItemName}"  Width="300"  IsReadOnly="True" FontFamily="Segoe UI Light"/>
+                    <DataGridTextColumn Header="QUANTITY" Binding="{Binding Path=Quantity}" Width="70"  IsReadOnly="True" FontFamily="Segoe UI Light"/>
+                    <DataGridTextColumn Header="UNIT PRICE" Binding="{Binding Path=Price}" Width="100"  IsReadOnly="True" FontFamily="Segoe UI Light"/>
+                    <DataGridTextColumn Header="AMOUNT" Binding="{Binding Path=Total}" Width="100"  IsReadOnly="True" FontFamily="Segoe UI Light"/>
+                </DataGrid.Columns>
+            </DataGrid>
             <!--<third GroupBox/>-->
-            <GroupBox Header="Summary" Margin="4,4,4,4" Width="785" Height="55" BorderBrush="#FF0C0D0E">
+            <StackPanel Height="30">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="380"/>
                         <ColumnDefinition Width="70"/>
-                        <ColumnDefinition Width="10*"/>
-                        <ColumnDefinition Width="210*"/>
-                        <ColumnDefinition Width="70*"/>
-                        <ColumnDefinition Width="10*"/>
-                        <ColumnDefinition Width="300*"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="100*"/>
                     </Grid.ColumnDefinitions>
-                    <!--Row 1 Name-->
-                    <Label Content="Total (RM)" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Width="70" Height="30"/>
-                    <TextBox Background="LightGray" IsReadOnly="True"  Grid.Row="0" Grid.Column="1" x:Name="TxtBxOrderTotal" Margin="0,5,0,3" Width="235" HorizontalAlignment="Center" Grid.ColumnSpan="2" Height="22"/>
-                    <Button Grid.Column="3" x:Name="ButtonReceipt" Content="Make Receipt" Height="21" Margin="0,6,0,0" Background="#FFDDDDDD" VerticalAlignment="Top"/>
+                    <!--Row 1
+                        Total-->
+                    <Label Margin="0,0,0,0" Content="TOTAL" HorizontalAlignment="Left" VerticalContentAlignment="Center" 
+                    Grid.Row="0" Grid.Column="1" Width="50" Height="30" FontFamily="Segoe UI Semibold"/>
+                    <Label Margin="0,0,0,0" Content="RM" HorizontalAlignment="Right" VerticalContentAlignment="Center" 
+                    Grid.Row="0" Grid.Column="2" Width="30" Height="30" FontFamily="Segoe UI Semibold"/>
+                    <TextBlock Margin="3,0,0,0" x:Name="TotalValue" Text="Value" HorizontalAlignment="Left" VerticalAlignment="Center"
+                    Grid.Row="0" Grid.Column="3" Width="90" FontSize="12" FontFamily="Segoe UI SemiBold"/>
                 </Grid>
-            </GroupBox>
-            <!--<Buttons Panel/>-->
-            <StackPanel Height="40" Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button x:Name="ButtonAdd" Content="Add Order Item" Height="30" Width="105" Margin="5,0,5,0" IsCancel="True"/>
-                <Button x:Name="ButtonUpdate" Content="Update Order Detail" Height="30" Width="124"/>
-                <Button x:Name="ButtonCancel" Content="Clear Form" Height="30" Width="105" Margin="5,0,10,0"/>
-                <Button x:Name="ButtonBack" Content="To Dashboard" Height="30" Width="105" Margin="-3,0,10,0"/>
-            </StackPanel>
-            <!--<Grid Panel/>-->
-            <StackPanel Height="210">
-                <DockPanel LastChildFill="True">
-                    <TextBlock Text="Order's Item List"
-                    Background="#FF160C0C"
-                    Foreground="White"
-                    FontSize="20"
-                    FontWeight="SemiBold"
-                    TextAlignment="Center"
-                    DockPanel.Dock="Top" />
-                </DockPanel>
-                <DataGrid VerticalScrollBarVisibility="Auto" x:Name="DataGridOrderItem" AutoGenerateColumns="False"
-      ItemsSource="{Binding orderItemList}" CanUserAddRows="False" Height="200" Margin="10">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Name" Binding="{Binding Path=ItemName}"  Width="100"  IsReadOnly="True"/>
-                        <DataGridTextColumn Header="Quantity (RM)" Binding="{Binding Path=Quantity}" Width="100"  IsReadOnly="True"/>
-                        <DataGridTextColumn Header="Price (RM)" Binding="{Binding Path=Price}" Width="100"  IsReadOnly="True"/>
-                        <DataGridTextColumn Header="Total (RM)" Binding="{Binding Path=Total}" Width="100"  IsReadOnly="True"/>
-                        <DataGridTemplateColumn Width="50">
-                            <DataGridTemplateColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Button Content="Delete" x:Name="ButtonDelete"/>
-                                </DataTemplate>
-                            </DataGridTemplateColumn.CellTemplate>
-                        </DataGridTemplateColumn>
-                    </DataGrid.Columns>
-                </DataGrid>
             </StackPanel>
         </StackPanel>
     </Grid>
