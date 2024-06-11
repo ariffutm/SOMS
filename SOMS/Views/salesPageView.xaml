@@ -6,71 +6,78 @@
         xmlns:local="clr-namespace:SOMS"
         mc:Ignorable="d"
         Title="Sales Page" Height="450" Width="900">
-    <StackPanel Height="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Height="450">
         <!--<First GroupBox/>-->
-        <GroupBox Header="Search" Margin="4,4,4,4" Width="870" Height="55" BorderBrush="#FF0C0D0E">
-            <Grid Height="35">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="1*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="70"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="90*"/>
-                    <ColumnDefinition Width="30*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="70*"/>
-                    <ColumnDefinition Width="30*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="70*"/>
-                    <ColumnDefinition Width="70*"/>
-                    <ColumnDefinition Width="70*"/>
-                </Grid.ColumnDefinitions>
-                <!--Row 1 Column 1 Sum-->
-                <Label Content="Sum (RM)" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Width="70"/>
-                <TextBox Background="LightGray" IsReadOnly="True"  Grid.Row="0" Grid.Column="1" x:Name="TxtBxSum" Margin="-10,5,0,3" Width="135" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
-                <!--Row 1 Column 2 Date From-->
-                <Label Content="From" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="3" Width="50"/>
-                <DatePicker Grid.Row="0" Grid.Column="5" x:Name="TxtBxDateFrom" Margin="-55,5,0,3" Width="110" HorizontalAlignment="Center">
-                    <DatePicker.BorderBrush>
-                        <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
-                            <GradientStop Color="#FFA3AEB9"/>
-                            <GradientStop Color="#FF8399A9" Offset="0.375"/>
-                            <GradientStop Color="#FF718597" Offset="0.375"/>
-                            <GradientStop Color="#FFABADB3" Offset="1"/>
-                        </LinearGradientBrush>
-                    </DatePicker.BorderBrush>
-                </DatePicker>
-                <!--Row 1 Column 3 Date to-->
-                <Label Content="To" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="6" Width="50"/>
-                <DatePicker Grid.Row="0" Grid.Column="8" x:Name="TxtBxDateTo" Margin="-55,5,0,3" Width="110" HorizontalAlignment="Center">
-                    <DatePicker.BorderBrush>
-                        <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
-                            <GradientStop Color="#FFA3AEB9"/>
-                            <GradientStop Color="#FF8399A9" Offset="0.375"/>
-                            <GradientStop Color="#FF718597" Offset="0.375"/>
-                            <GradientStop Color="#FFABADB3" Offset="1"/>
-                        </LinearGradientBrush>
-                    </DatePicker.BorderBrush>
-                </DatePicker>
-                <!--Row 1 Column 4 Button-->
-                <Button Grid.Column="9" Width="70" x:Name="ButtonFind" Content="Find" Height="21" Margin="-50,6,0,0" Background="#FFDDDDDD" VerticalAlignment="Top"/>
-                <Button Grid.Column="10" Width="100" x:Name="ButtonReport" Content="Generate Report" Height="21" Margin="-50,6,0,0" Background="#FFDDDDDD" VerticalAlignment="Top"/>
-            </Grid>
-        </GroupBox>
-        <!--<Grid/>-->
-        <StackPanel Height="300">
+            <GroupBox Header="Search" Margin="4,4,4,4" Width="870" Height="55" BorderBrush="#FF0C0D0E">
+                <Grid Height="35">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="90*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="70*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="70*"/>
+                        <ColumnDefinition Width="70*"/>
+                        <ColumnDefinition Width="70*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--Row 1 Column 1 Sum-->
+                    <Label Content="Sum (RM)" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Width="70"/>
+                    <TextBox Background="LightGray" IsReadOnly="True"  Grid.Row="0" Grid.Column="1" x:Name="TxtBxSum" Margin="-10,5,0,3" Width="135" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+                    <!--Row 1 Column 2 Date From-->
+                    <Label Content="From" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="3" Width="50"/>
+                    <DatePicker Grid.Row="0" Grid.Column="5" x:Name="TxtBxDateFrom" Margin="-55,5,0,3" Width="110" HorizontalAlignment="Center">
+                        <DatePicker.BorderBrush>
+                            <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                                <GradientStop Color="#FFA3AEB9"/>
+                                <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                                <GradientStop Color="#FF718597" Offset="0.375"/>
+                                <GradientStop Color="#FFABADB3" Offset="1"/>
+                            </LinearGradientBrush>
+                        </DatePicker.BorderBrush>
+                    </DatePicker>
+                    <!--Row 1 Column 3 Date to-->
+                    <Label Content="To" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="6" Width="50"/>
+                    <DatePicker Grid.Row="0" Grid.Column="8" x:Name="TxtBxDateTo" Margin="-55,5,0,3" Width="110" HorizontalAlignment="Center">
+                        <DatePicker.BorderBrush>
+                            <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                                <GradientStop Color="#FFA3AEB9"/>
+                                <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                                <GradientStop Color="#FF718597" Offset="0.375"/>
+                                <GradientStop Color="#FFABADB3" Offset="1"/>
+                            </LinearGradientBrush>
+                        </DatePicker.BorderBrush>
+                    </DatePicker>
+                    <!--Row 1 Column 4 Button-->
+                    <Button Grid.Column="9" Width="70" x:Name="ButtonFind" Content="Find" Height="21" Margin="-50,6,0,0" Background="#FFDDDDDD" VerticalAlignment="Top"/>
+                    <Button Grid.Column="10" Width="100" x:Name="ButtonReport" Content="Generate Report" Height="21" Margin="-50,6,0,0" Background="#FFDDDDDD" VerticalAlignment="Top"/>
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+    <!--<Grid/>-->
+        <Grid Grid.Row="1">
             <DataGrid VerticalScrollBarVisibility="Auto" x:Name="DataGridSales" AutoGenerateColumns="False"
-            ItemsSource="{Binding salesList}" CanUserAddRows="False" Margin="10,10,10,10">
+            ItemsSource="{Binding salesList}" CanUserAddRows="False" Margin="10,10,10,10" FontFamily="Consolas">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding Path=Id}"  Width="100"  IsReadOnly="True"/>
                     <DataGridTextColumn Header="Order ID" Binding="{Binding Path=orderId}" Width="150"  IsReadOnly="True"/>
                     <DataGridTextColumn Header="Order Item ID" Binding="{Binding Path=orderItemId}" Width="150"  IsReadOnly="True"/>
                     <DataGridTextColumn Header="Item Name" Binding="{Binding Path=itemName}" Width="150"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Quantity" Binding="{Binding Path=Quantity}" Width="100"  IsReadOnly="True"/>
                     <DataGridTextColumn Header="Date" Binding="{Binding Path=dateIssued}" Width="100"  IsReadOnly="True"/>
                     <DataGridTextColumn Header="Amount (RM)" Binding="{Binding Path=Amount}" Width="100"  IsReadOnly="True"/>
                 </DataGrid.Columns>
             </DataGrid>
-        </StackPanel>
-    </StackPanel>
+        </Grid>
+    </Grid>
 </Window>

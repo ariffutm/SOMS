@@ -164,9 +164,9 @@ Namespace ViewModels
                     MessageBox.Show("Added New Order with ID: " + Id)
                     'Add new order item
                     addNewOrderItemIntoOrder(Id, orderItem, itemPrice, itemQuantity)
-                    'Add new sales
                     ''Get orderItem 
                     getOrderItemByOrderIdAndItemIdFromModel(Id, orderItem.ID)
+                    'Add new sales
                     AddSalesIntoDatabase(Id, dateIssue, orderItemModel)
                 Catch
                     MessageBox.Show("Make sure all boxes are filled, especially the date.")
@@ -247,19 +247,24 @@ Namespace ViewModels
                                                     WHERE Id=?;"
                     Dim com = New OleDbCommand(sql, con)
                     con.Open()
-                    com.Parameters.AddWithValue("@newId", newId)
-                    com.Parameters.AddWithValue("@cust", Cust)
-                    com.Parameters.AddWithValue("@phone", Phone)
-                    com.Parameters.AddWithValue("@email", Email)
-                    com.Parameters.AddWithValue("@address", Address)
-                    com.Parameters.AddWithValue("@payment", Payment)
-                    com.Parameters.AddWithValue("@courier", Courier)
-                    com.Parameters.AddWithValue("@status", Status)
-                    com.Parameters.AddWithValue("@date", dateIssue)
-                    com.Parameters.AddWithValue("@oldId", oldId)
-                    com.ExecuteNonQuery()
-                    MessageBox.Show("Order Details successfully updated.")
-                    con.Close()
+                    Try
+                        com.Parameters.AddWithValue("@newId", newId)
+                        com.Parameters.AddWithValue("@cust", Cust)
+                        com.Parameters.AddWithValue("@phone", Phone)
+                        com.Parameters.AddWithValue("@email", Email)
+                        com.Parameters.AddWithValue("@address", Address)
+                        com.Parameters.AddWithValue("@payment", Payment)
+                        com.Parameters.AddWithValue("@courier", Courier)
+                        com.Parameters.AddWithValue("@status", Status)
+                        com.Parameters.AddWithValue("@date", dateIssue)
+                        com.Parameters.AddWithValue("@oldId", oldId)
+                        com.ExecuteNonQuery()
+                        MessageBox.Show("Order Details successfully updated.")
+                        con.Close()
+                        updateSalesByOrderIdIntoDatabase(newId, dateIssue)
+                    Catch
+                        MessageBox.Show("Error in updating order: updateOrderByIDIntoModel in orderPageViewModel.vb")
+                    End Try
             End Select
 
         End Sub
@@ -284,18 +289,36 @@ Namespace ViewModels
         ''Sales
         '''Add new sales
         Private Sub AddSalesIntoDatabase(orderId As String, _date As String, orderItem As orderItem)
-            Dim sql As String = "INSERT INTO [Sales] (orderId, orderItemId, itemName, dateIssued, Amount) VALUES 
-                                                      (?,?,?,?,?)"
+            Dim sql As String = "INSERT INTO [Sales] (orderId, orderItemId, itemName, 
+                                                      Quantity, dateIssued, Amount) VALUES 
+                                                      (?,?,?,
+                                                       ?,?,?)"
             Dim com = New OleDbCommand(sql, con)
             con.Open()
             Try
                 com.Parameters.AddWithValue("@orderId", orderId)
                 com.Parameters.AddWithValue("@orderItemId", orderItem.ID)
                 com.Parameters.AddWithValue("@itemName", orderItem.ItemName)
+                com.Parameters.AddWithValue("@quantity", orderItem.Quantity)
                 com.Parameters.AddWithValue("@dateIssued", _date)
                 com.Parameters.AddWithValue("@amount", orderItem.Total)
                 com.ExecuteNonQuery()
             Catch
+                MessageBox.Show("Error in addSalesIntoDatabase of orderPageViewModel.vb")
+            End Try
+            con.Close()
+        End Sub
+        '''Update existing sales
+        Private Sub updateSalesByOrderIdIntoDatabase(orderId As String, _date As String)
+            Dim sql As String = "UPDATE [Sales] SET dateIssued=? WHERE orderId=?;"
+            Dim com = New OleDbCommand(sql, con)
+            con.Open()
+            Try
+                com.Parameters.AddWithValue("@dateIssued", _date)
+                com.Parameters.AddWithValue("@orderId", orderId)
+                com.ExecuteNonQuery()
+            Catch
+                MessageBox.Show("Error in updateSalesIntoDatabase of orderPageViewModel.vb")
             End Try
             con.Close()
         End Sub

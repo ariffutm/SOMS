@@ -151,9 +151,9 @@
                                DockPanel.Dock="Top" />
                 </DockPanel>
                 <DataGrid VerticalScrollBarVisibility="Auto" x:Name="DataGridOrderItem" AutoGenerateColumns="False"
-                 ItemsSource="{Binding orderItemList}" CanUserAddRows="False" Height="310" Margin="10">
+                 ItemsSource="{Binding orderItemList}" CanUserAddRows="False" Height="310" Margin="10" FontFamily="Consolas">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Name" Binding="{Binding Path=ItemName}"  Width="100"  IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Name" Binding="{Binding Path=ItemName}"  Width="150"  IsReadOnly="True"/>
                         <DataGridTextColumn Header="Quantity" Binding="{Binding Path=Quantity}" Width="100"  IsReadOnly="True"/>
                         <DataGridTextColumn Header="Price (RM)" Binding="{Binding Path=Price}" Width="100"  IsReadOnly="True"/>
                         <DataGridTextColumn Header="Amount (RM)" Binding="{Binding Path=Total}" Width="100"  IsReadOnly="True"/>

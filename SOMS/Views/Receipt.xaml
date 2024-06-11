@@ -55,20 +55,20 @@
                     Grid.Row="0" Grid.Column="2" Width="40"/>
                     <!--REF Value-->
                     <TextBlock x:Name="RefValue" Text="Value" HorizontalAlignment="Left"
-                    Grid.Row="0" Grid.Column="3" Width="171" FontSize="11" FontFamily="Segoe UI Light"/>
+                    Grid.Row="0" Grid.Column="3" Width="171" FontSize="11" FontFamily="Consolas"/>
                     <!--Row 2
                              Phone-->
                     <TextBlock Text="Telp:" HorizontalAlignment="Center" Grid.Row="1" Width="30" 
                     FontSize="11" FontFamily="Segoe UI SemiBold"/>
                     <TextBlock Grid.Column="1" Grid.ColumnSpan="3" x:Name="Phone" Text="Phone" Margin="0,1,0,0" HorizontalAlignment="Left"
-                    Grid.Row="1" Width="200" FontSize="11" FontFamily="Segoe UI Light"/>
+                    Grid.Row="1" Width="200" FontSize="11" FontFamily="Consolas"/>
                     <!--Column 2
                              Date-->
                     <TextBlock x:Name="Date" Text="DATE" HorizontalAlignment="Center" 
                     Grid.Row="1" Grid.Column="2" Width="40"/>
                     <!--Date Value-->
                     <TextBlock x:Name="DateValue" Text="Value" HorizontalAlignment="Left"
-                    Grid.Row="1" Grid.Column="3" Width="171" FontSize="11" FontFamily="Segoe UI Light"/>
+                    Grid.Row="1" Grid.Column="3" Width="171" FontSize="11" FontFamily="Consolas"/>
                     <!--Row 3 
                             Address-->
                     <TextBlock Grid.ColumnSpan="3"  x:Name="Address1" Text="Address" HorizontalAlignment="Left"  
@@ -79,7 +79,7 @@
                     Grid.Row="2" Grid.Column="2" Width="40"/>
                     <!--Type Value-->
                     <TextBlock x:Name="TypeValue" Text="Value" HorizontalAlignment="Left"
-                    Grid.Row="2" Grid.Column="3" Width="171" FontSize="11" FontFamily="Segoe UI Light"/>
+                    Grid.Row="2" Grid.Column="3" Width="171" FontSize="11" FontFamily="Consolas"/>
                     <!--Row 4 
                             Address-->
                     <TextBlock Grid.ColumnSpan="3"  x:Name="Address2" Text="Address"  HorizontalAlignment="Left"  
@@ -90,12 +90,12 @@
                      Grid.Row="3" Grid.Column="2" Width="40"/>
                     <!--Type Value-->
                     <TextBlock x:Name="TrackValue" Text="Value" HorizontalAlignment="Left"
-                    Grid.Row="3" Grid.Column="3" Width="171" FontSize="11" FontFamily="Segoe UI Light"/>
+                    Grid.Row="3" Grid.Column="3" Width="171" FontSize="11" FontFamily="Consolas"/>
                 </Grid>
             </GroupBox>
             <!--<Grid Panel/>-->
             <DataGrid VerticalScrollBarVisibility="Auto" x:Name="DataGridOrderItem" AutoGenerateColumns="False"
-                 CanUserAddRows="False" Margin="5" FontFamily="Segoe UI Semibold">
+                 CanUserAddRows="False" Margin="5" FontFamily="Consolas">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ITEM" Binding="{Binding Path=ItemName}"  Width="300"  IsReadOnly="True" FontFamily="Segoe UI Light"/>
                     <DataGridTextColumn Header="QUANTITY" Binding="{Binding Path=Quantity}" Width="70"  IsReadOnly="True" FontFamily="Segoe UI Light"/>
@@ -120,9 +120,9 @@
                     <Label Margin="0,0,0,0" Content="TOTAL" HorizontalAlignment="Left" VerticalContentAlignment="Center" 
                     Grid.Row="0" Grid.Column="1" Width="50" Height="30" FontFamily="Segoe UI Semibold"/>
                     <Label Margin="0,0,0,0" Content="RM" HorizontalAlignment="Right" VerticalContentAlignment="Center" 
-                    Grid.Row="0" Grid.Column="2" Width="30" Height="30" FontFamily="Segoe UI Semibold"/>
+                    Grid.Row="0" Grid.Column="2" Width="30" Height="30" FontFamily="Consolas"/>
                     <TextBlock Margin="3,0,0,0" x:Name="TotalValue" Text="Value" HorizontalAlignment="Left" VerticalAlignment="Center"
-                    Grid.Row="0" Grid.Column="3" Width="90" FontSize="12" FontFamily="Segoe UI SemiBold"/>
+                    Grid.Row="0" Grid.Column="3" Width="90" FontSize="12" FontFamily="Consolas"/>
                 </Grid>
             </StackPanel>
         </StackPanel>

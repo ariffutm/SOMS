@@ -35,6 +35,7 @@ Public Class salesPageViewModel
              .orderId = data("orderId"),
              .orderItemId = data("orderItemId"),
              .itemName = data("itemName"),
+             .Quantity = data("Quantity"),
              .dateIssued = data("dateIssued"),
              .Amount = data("Amount")
             }
@@ -44,7 +45,7 @@ Public Class salesPageViewModel
         calculateSalesSum()
     End Sub
     ''By date
-    ''' Under
+    '''Under
     Public Sub getSalesByUnderDateFromModel(dateTo As String)
         salesList.Clear()
         Dim sql As String = "Select * From [Sales] WHERE dateIssued <= ?"
@@ -88,7 +89,7 @@ Public Class salesPageViewModel
         End While
         con.Close()
     End Sub
-    ''Between Date
+    '''Between Date
     Public Sub getSalesBetweenDateFromModel(dateFrom As String, dateTo As String)
         salesList.Clear()
         Dim sql As String = "Select * From [Sales] WHERE dateIssued BETWEEN ? AND ?"

@@ -31,4 +31,19 @@
     <Resource Include="Resources\logo.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="SOMSDataSet.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SOMSDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="SOMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SOMSDataSet.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+
 </Project>
