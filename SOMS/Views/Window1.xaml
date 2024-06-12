@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
-        <DatePicker x:Name="dateOne" HorizontalAlignment="Left" Margin="163,115,0,0" VerticalAlignment="Top"/>
-
+        <WindowsFormsHost Margin="3,2,7,58"/>
     </Grid>
 </Window>

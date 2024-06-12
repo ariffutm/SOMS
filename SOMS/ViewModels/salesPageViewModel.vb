@@ -28,19 +28,7 @@ Public Class salesPageViewModel
         Dim com As New OleDbCommand(sql, con)
         con.Open()
         'Exceute reader, then load into table
-        data = com.ExecuteReader()
-        While data.Read()
-            Dim Model As New Sales With {
-             .Id = data("Id"),
-             .orderId = data("orderId"),
-             .orderItemId = data("orderItemId"),
-             .itemName = data("itemName"),
-             .Quantity = data("Quantity"),
-             .dateIssued = data("dateIssued"),
-             .Amount = data("Amount")
-            }
-            salesList.Add(Model)
-        End While
+        getSalesRecord(com)
         con.Close()
         calculateSalesSum()
     End Sub
@@ -53,18 +41,7 @@ Public Class salesPageViewModel
         con.Open()
         com.Parameters.AddWithValue("@dateIssued", dateTo)
         'Exceute reader, then load into table
-        data = com.ExecuteReader()
-        While data.Read()
-            Dim Model As New Sales With {
-              .Id = data("Id"),
-             .orderId = data("orderId"),
-             .orderItemId = data("orderItemId"),
-             .itemName = data("itemName"),
-             .dateIssued = data("dateIssued"),
-             .Amount = data("Amount")
-            }
-            salesList.Add(Model)
-        End While
+        getSalesRecord(com)
         con.Close()
     End Sub
     ''' Above
@@ -75,19 +52,9 @@ Public Class salesPageViewModel
         con.Open()
         com.Parameters.AddWithValue("@dateIssued", dateFrom)
         'Exceute reader, then load into table
-        data = com.ExecuteReader()
-        While data.Read()
-            Dim Model As New Sales With {
-              .Id = data("Id"),
-             .orderId = data("orderId"),
-             .orderItemId = data("orderItemId"),
-             .itemName = data("itemName"),
-             .dateIssued = data("dateIssued"),
-             .Amount = data("Amount")
-            }
-            salesList.Add(Model)
-        End While
+        getSalesRecord(com)
         con.Close()
+        calculateSalesSum()
     End Sub
     '''Between Date
     Public Sub getSalesBetweenDateFromModel(dateFrom As String, dateTo As String)
@@ -97,20 +64,10 @@ Public Class salesPageViewModel
         con.Open()
         com.Parameters.AddWithValue("@dateIssued", dateFrom)
         com.Parameters.AddWithValue("@dateIssued", dateTo)
-        'Exceute reader, then load into table
-        data = com.ExecuteReader()
-        While data.Read()
-            Dim Model As New Sales With {
-              .Id = data("Id"),
-             .orderId = data("orderId"),
-             .orderItemId = data("orderItemId"),
-             .itemName = data("itemName"),
-             .dateIssued = data("dateIssued"),
-             .Amount = data("Amount")
-            }
-            salesList.Add(Model)
-        End While
+        'Exceute reader function, then load into table
+        getSalesRecord(com)
         con.Close()
+        calculateSalesSum()
     End Sub
 
     'Sub-function 
@@ -143,5 +100,21 @@ Public Class salesPageViewModel
         Else
             getAllSalesFromModel()
         End If
+    End Sub
+    ''get Sales Record from Database
+    Public Sub getSalesRecord(com As OleDbCommand)
+        data = com.ExecuteReader()
+        While data.Read()
+            Dim Model As New Sales With {
+              .Id = data("Id"),
+             .orderId = data("orderId"),
+             .orderItemId = data("orderItemId"),
+             .itemName = data("itemName"),
+             .Quantity = data("Quantity"),
+             .dateIssued = data("dateIssued"),
+             .Amount = data("Amount")
+            }
+            salesList.Add(Model)
+        End While
     End Sub
 End Class

@@ -167,10 +167,6 @@ Public Class orderSubsystemPageView
         print.PrintVisual(receipt, "Receipt")
         'End If
     End Sub
-    ''Display Receipt Data Function
-    Private Sub Testing(input As String)
-        MessageBox.Show(input)
-    End Sub
     ''Address Function
     Private Function getAddress(Address As String) As String()
         Dim Input As String() = Split(Address, ",", 3)

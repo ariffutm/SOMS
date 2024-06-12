@@ -19,7 +19,9 @@ C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\orderSubsy
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\profilePageView.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\Receipt.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\salesPageView.g.vb
+C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\salesReport.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\userPageView.g.vb
+C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\Window1.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Application.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\SOMS_MarkupCompile.cache
@@ -31,7 +33,9 @@ C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\orderSubsy
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\profilePageView.baml
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\Receipt.baml
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\salesPageView.baml
+C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\salesReport.baml
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\userPageView.baml
+C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\Window1.baml
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\SOMS.g.resources
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\SOMS.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\SOMS.AssemblyInfoInputs.cache
@@ -44,5 +48,3 @@ C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\refint\SOMS.dll
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\SOMS.pdb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\SOMS.genruntimeconfig.cache
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\ref\SOMS.dll
-C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\Window1.g.vb
-C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Debug\net6.0-windows\Views\Window1.baml
