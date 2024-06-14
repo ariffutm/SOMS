@@ -1,9 +1,8 @@
 ﻿Imports System.Collections.ObjectModel
 Imports System.Data
 Imports System.Data.OleDb
-Imports System.Diagnostics.Metrics
-Imports System.Net
 Imports SOMS.Models
+Imports System.Net.Mail
 
 Namespace ViewModels
     Public Class orderPageViewModel
@@ -52,7 +51,7 @@ Namespace ViewModels
             End While
             con.Close()
         End Sub
-        ''Select Order by ID
+        ''Select order by ID
         Public Sub getOrderByIdFromModel(Id As String)
             Dim sql As String = "Select * From [Order] WHERE Id = ?"
             Dim com As New OleDbCommand(sql, con)
@@ -75,7 +74,7 @@ Namespace ViewModels
               }
             con.Close()
         End Sub
-        ''Select Order's order items By Order ID
+        ''Select order's order items By order ID
         Public Sub getOrderItemListByOrderIdFromModel(OrderId As String)
             orderItemList.Clear()
             Dim sql As String = "Select * From [OrderItems] WHERE orderId = ?"
@@ -98,7 +97,7 @@ Namespace ViewModels
             End While
             con.Close()
         End Sub
-        ''Select order items By Order ID and Item ID
+        ''Select order items By order ID and item ID
         Public Sub getOrderItemByOrderIdAndItemIdFromModel(OrderId As String, itemId As String)
             Dim sql As String = "Select * From [OrderItems] WHERE orderId = ? AND itemId = ?"
             Dim com As New OleDbCommand(sql, con)
@@ -126,7 +125,7 @@ Namespace ViewModels
             con.Close()
         End Sub
 
-        'UC003 Add Order
+        'UC003 Add order
         Public Sub addNewOrderIntoModel(Cust As String, Phone As String, Email As String,
                                         Address As String, Payment As String, Id As String,
                                         Courier As String, Status As String, dateIssue As String,
@@ -202,7 +201,7 @@ Namespace ViewModels
         End Sub
 
         'UC005.2 Delete
-        ''Delete Order Item
+        ''Delete order's order item
         Public Sub deleteOrderItemFromModel(deleteOrderItem As orderItem)
             Select Case MsgBox("Remove this item with the name: " + deleteOrderItem.ItemName, MsgBoxStyle.YesNo)
                 Case MsgBoxResult.Yes
@@ -217,7 +216,7 @@ Namespace ViewModels
             End Select
             getOrderItemListByOrderIdFromModel(deleteOrderItem.OrderID)
         End Sub
-        ''Delete Order
+        ''Delete order
         Public Sub deleteOrderFromModel(deleteOrder As Order)
             Select Case MsgBox("Remove this order with the ID: " + deleteOrder.Id, MsgBoxStyle.YesNo)
                 Case MsgBoxResult.Yes
@@ -234,7 +233,6 @@ Namespace ViewModels
                     con.Close()
             End Select
         End Sub
-
         'UC005.3 Update
         Public Sub updateOrderByIDIntoModel(Cust As String, Phone As String, Email As String,
                                             Address As String, Payment As String, newId As String,
@@ -267,6 +265,39 @@ Namespace ViewModels
                     End Try
             End Select
 
+        End Sub
+
+        ''UC006 Notify customer with email, Make sure SMTP's feature is on. For example, the feature of less secure access in Gmail has to be on.
+        Public Sub requestOrderDetailsForNotifyByID(selectedOrder As Order)
+            Select Case MsgBox("Send notification to this email: " + selectedOrder.Email, MsgBoxStyle.YesNo)
+                Case MsgBoxResult.Yes
+                    Try
+                        Dim Smtp_Server As New SmtpClient
+                        Dim e_mail As New MailMessage()
+                        Dim mailAddress As String = Database.credentialEmail
+                        Dim mailPassword As String = Database.credentialPassword
+                        'SMTP Details
+                        With Smtp_Server
+                            .UseDefaultCredentials = False
+                            .Credentials = New Net.NetworkCredential(mailAddress, mailPassword)
+                            .Port = 587
+                            .EnableSsl = True
+                            .Host = "smtp.gmail.com"
+                        End With
+                        'Email details
+                        With e_mail
+                            .To.Add(selectedOrder.Email)
+                            .From = New MailAddress(mailAddress)
+                            .Subject = selectedOrder.Customer + "'s Order in PlantHerb"
+                            .Body = "The order's transaction reference is " + selectedOrder.Id + ", and courier tracking is " + selectedOrder.Courier + ". Thanks for order."
+                        End With
+
+                        Smtp_Server.Send(e_mail)
+                        MessageBox.Show("Mail Sent")
+                    Catch error_t As Exception
+                        MessageBox.Show("Make sure the internet connection is online.")
+                    End Try
+            End Select
         End Sub
 
         'Sub-Function
@@ -321,10 +352,6 @@ Namespace ViewModels
                 MessageBox.Show("Error in updateSalesIntoDatabase of orderPageViewModel.vb")
             End Try
             con.Close()
-        End Sub
-        ''Testing input
-        Private Sub Testing(input As String)
-            MessageBox.Show(input)
         End Sub
     End Class
 
