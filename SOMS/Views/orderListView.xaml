@@ -7,40 +7,71 @@
         mc:Ignorable="d"
         Title="List of Order" Height="450" Width="1500">
     <Grid>
-        <DataGrid VerticalScrollBarVisibility="Auto" x:Name="DataGridOrder" AutoGenerateColumns="False"
-         ItemsSource="{Binding orderList}" CanUserAddRows="False" Margin="10,10,10,10" FontFamily="Consolas">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Reference" Binding="{Binding Path=Id}"  Width="100"  IsReadOnly="True"/>
-                <DataGridTextColumn Header="Customer" Binding="{Binding Path=Customer}" Width="150"  IsReadOnly="True"/>
-                <DataGridTextColumn Header="Phone" Binding="{Binding Path=Phone}" Width="100"  IsReadOnly="True"/>
-                <DataGridTextColumn Header="Email" Binding="{Binding Path=Email}" Width="100"  IsReadOnly="True"/>
-                <DataGridTextColumn Header="Method" Binding="{Binding Path=Method}" Width="100"  IsReadOnly="True"/>
-                <DataGridTextColumn Header="Courier" Binding="{Binding Path=Courier}" Width="100"  IsReadOnly="True"/>
-                <DataGridTextColumn Header="Status" Binding="{Binding Path=Status}" Width="100"  IsReadOnly="True"/>
-                <DataGridTextColumn Header="Date" Binding="{Binding Path=IssuedOn}" Width="100"  IsReadOnly="True"/>
-                <DataGridTextColumn Header="Address" Binding="{Binding Path=Address}" Width="300"  IsReadOnly="True"/>
-                <DataGridTemplateColumn Width="50">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Click="SelectOrder" Content="Select" x:Name="ButtonSelect"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn Width="50">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Click="RemoveOrder" Content="Delete" x:Name="ButtonDelete"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn Width="50">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Click="clickNotifyCustomerOrderButton" Content="Email" x:Name="ButtonEmail"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
-        </DataGrid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Left" Height="450">
+            <!--<First GroupBox/>-->
+            <GroupBox Header="Search" Margin="3,3,3,3" Width="510" Height="60" BorderBrush="#FF0C0D0E">
+                <Grid Height="35">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="230"/>
+                        <ColumnDefinition Width="110"/>
+                        <ColumnDefinition Width="100"/>
+                      
+                    </Grid.ColumnDefinitions>
+                    <!--Row 1 Column 1 Sum-->
+                    <Label Content="Details" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Width="50"/>
+                    <TextBox Grid.Row="0" Grid.Column="2" x:Name="TxtBxDetails" Height="30" Width="200" HorizontalAlignment="Left"/>
+                    <!--Row 1 Column 4 Button-->
+                    <Button Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" x:Name="ButtonFindID" Content="Find By Reference" Height="21" Background="#FFDDDDDD"/>
+                    <Button Grid.Column="4" x:Name="ButtonFindDate" Content="Find By Date" Height="21" Background="#FFDDDDDD" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+        <Grid Grid.Row="1">
+
+            <DataGrid VerticalScrollBarVisibility="Auto" x:Name="DataGridOrder" AutoGenerateColumns="False"
+         ItemsSource="{Binding orderList}" CanUserAddRows="False" Margin="7,7,7,7" FontFamily="Consolas">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Reference" Binding="{Binding Path=Id}"  Width="100"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Customer" Binding="{Binding Path=Customer}" Width="150"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Phone" Binding="{Binding Path=Phone}" Width="100"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding Path=Email}" Width="100"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Method" Binding="{Binding Path=Method}" Width="100"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Courier" Binding="{Binding Path=Courier}" Width="100"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Status" Binding="{Binding Path=Status}" Width="100"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Date" Binding="{Binding Path=IssuedOn}" Width="100"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Address" Binding="{Binding Path=Address}" Width="300"  IsReadOnly="True"/>
+                    <DataGridTemplateColumn Width="50">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Click="SelectOrder" Content="Select" x:Name="ButtonSelect"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Width="50">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Click="RemoveOrder" Content="Delete" x:Name="ButtonDelete"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Width="50">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Click="clickNotifyCustomerOrderButton" Content="Email" x:Name="ButtonEmail"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
     </Grid>
 </Window>
