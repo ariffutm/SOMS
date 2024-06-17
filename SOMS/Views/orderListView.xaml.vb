@@ -53,8 +53,29 @@ Public Class orderListView
             MessageBox.Show("The customer emptied out the email details.")
         End If
     End Sub
+    'Handle 'Find By Reference' Button Click event
+    Private Sub ButtonFindID_Click(sender As Object, e As RoutedEventArgs) Handles ButtonFindID.Click
+        If String.IsNullOrEmpty(TxtBxDetail.Text) = False Then
+            viewModel.getOrderByIdFromModel(TxtBxDetail.Text)
+        Else
+            MessageBox.Show("Please fill in the reference in the blank.")
+        End If
+    End Sub
+    'Handle 'Find By Date' Button Click event
+    Private Sub ButtonFindDate_Click(sender As Object, e As RoutedEventArgs) Handles ButtonFindDate.Click
+        If String.IsNullOrEmpty(TxtBxDetail.Text) = False Then
+            viewModel.getOrderByDateFromModel(TxtBxDetail.Text)
+        Else
+            MessageBox.Show("Please fill in the date in the right format in the blank, such as DD/MM/YYYY or 21/12/2020.")
+        End If
+    End Sub
+    'Handle 'Get All Order' Button Click event
+    Private Sub ButtonAllOrder_Click(sender As Object, e As RoutedEventArgs) Handles ButtonAllOrder.Click
+        viewModel.getOrderListFromModel()
+    End Sub
     'Testing input
     Private Sub Testing(input As String)
         MessageBox.Show(input)
     End Sub
+
 End Class

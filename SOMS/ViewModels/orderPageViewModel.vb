@@ -55,13 +55,14 @@ Namespace ViewModels
         Public Sub getOrderByIdFromModel(Id As String)
             Dim sql As String = "Select * From [Order] WHERE Id = ?"
             Dim com As New OleDbCommand(sql, con)
+            orderList.Clear()
             com.Parameters.AddWithValue("@Id", Id)
             con.Open()
             'Exceute reader, then load into Model
-            data = com.ExecuteReader()
-            data.Read()
-
-            Dim orderModel As New Order With {
+            Try
+                data = com.ExecuteReader()
+                data.Read()
+                Dim orderModel As New Order With {
               .Customer = data.GetValue("Customer").ToString,
               .Phone = data.GetValue("Phone").ToString,
               .Email = data.GetValue("Email").ToString,
@@ -72,6 +73,38 @@ Namespace ViewModels
               .Status = data.GetValue("Status").ToString,
               .IssuedOn = FormatDateTime(data.GetValue("dateIssued"), DateFormat.ShortDate)
               }
+                orderList.Add(orderModel)
+            Catch
+                MessageBox.Show("Error in finding order.")
+            End Try
+            con.Close()
+        End Sub
+        ''Select order by Date
+        Public Sub getOrderByDateFromModel(_date As String)
+            Dim sql As String = "Select * From [Order] WHERE dateIssued = ?"
+            Dim com As New OleDbCommand(sql, con)
+            orderList.Clear()
+            com.Parameters.AddWithValue("@date", _date)
+            con.Open()
+            'Exceute reader, then load into Model
+            Try
+                data = com.ExecuteReader()
+                data.Read()
+                Dim orderModel As New Order With {
+              .Customer = data.GetValue("Customer").ToString,
+              .Phone = data.GetValue("Phone").ToString,
+              .Email = data.GetValue("Email").ToString,
+              .Address = data.GetValue("Address").ToString,
+              .Method = data.GetValue("Payment").ToString,
+              .Id = data.GetValue("Id").ToString,
+              .Courier = data.GetValue("courierRef").ToString,
+              .Status = data.GetValue("Status").ToString,
+              .IssuedOn = FormatDateTime(data.GetValue("dateIssued"), DateFormat.ShortDate)
+              }
+                orderList.Add(orderModel)
+            Catch
+                MessageBox.Show("Error in finding order.")
+            End Try
             con.Close()
         End Sub
         ''Select order's order items By order ID
