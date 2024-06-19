@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SOMS"
         mc:Ignorable="d"
-        Title="Profile Page" Height="450" Width="800">
+        Title="Profile Page" Height="390" Width="530">
 
     <Grid  Height="350" Width="525" Background="Bisque">
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,5,0,0" x:Name="textBlockHeading" VerticalAlignment="Top" Width="110"  FontSize="17" FontStretch="ExtraCondensed"><Run Language="en-my" Text="Update profile"/><Run Text=":"/></TextBlock>

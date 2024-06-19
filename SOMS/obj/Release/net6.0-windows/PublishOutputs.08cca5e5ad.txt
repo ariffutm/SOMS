@@ -1,0 +1,11 @@
+C:\Users\VICTUS\Desktop\Downloads\New folder\BACKUP\PPD\degree\sem 6\PSM\App\SOMS.exe
+C:\Users\VICTUS\Desktop\Downloads\New folder\BACKUP\PPD\degree\sem 6\PSM\App\SOMS.dll
+C:\Users\VICTUS\Desktop\Downloads\New folder\BACKUP\PPD\degree\sem 6\PSM\App\SOMS.deps.json
+C:\Users\VICTUS\Desktop\Downloads\New folder\BACKUP\PPD\degree\sem 6\PSM\App\SOMS.runtimeconfig.json
+C:\Users\VICTUS\Desktop\Downloads\New folder\BACKUP\PPD\degree\sem 6\PSM\App\SOMS.pdb
+C:\Users\VICTUS\Desktop\Downloads\New folder\BACKUP\PPD\degree\sem 6\PSM\App\System.Configuration.ConfigurationManager.dll
+C:\Users\VICTUS\Desktop\Downloads\New folder\BACKUP\PPD\degree\sem 6\PSM\App\System.Data.OleDb.dll
+C:\Users\VICTUS\Desktop\Downloads\New folder\BACKUP\PPD\degree\sem 6\PSM\App\System.Diagnostics.PerformanceCounter.dll
+C:\Users\VICTUS\Desktop\Downloads\New folder\BACKUP\PPD\degree\sem 6\PSM\App\System.Security.Cryptography.ProtectedData.dll
+C:\Users\VICTUS\Desktop\Downloads\New folder\BACKUP\PPD\degree\sem 6\PSM\App\runtimes\win\lib\net6.0\System.Data.OleDb.dll
+C:\Users\VICTUS\Desktop\Downloads\New folder\BACKUP\PPD\degree\sem 6\PSM\App\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
