@@ -49,7 +49,7 @@
                     <DataGridTextColumn Header="Courier" Binding="{Binding Path=Courier}" Width="100"  IsReadOnly="True"/>
                     <DataGridTextColumn Header="Status" Binding="{Binding Path=Status}" Width="100"  IsReadOnly="True"/>
                     <DataGridTextColumn Header="Date" Binding="{Binding Path=IssuedOn}" Width="100"  IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Address" Binding="{Binding Path=Address}" Width="300"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Address" Binding="{Binding Path=Address}" Width="400"  IsReadOnly="True"/>
                     <DataGridTemplateColumn Width="50">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>

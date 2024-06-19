@@ -15,19 +15,20 @@ Public Class salesPageView
         viewModel.getAllSalesFromModel()
         Return viewModel
     End Function
-    ''Sales List By Date
+
+    'UI Control
+    ''Handle Generate Report Button Click - UC 002 Generate Report
+    Private Sub ButtonReport_Click(sender As Object, e As RoutedEventArgs) Handles ButtonReport.Click
+        makeReport()
+    End Sub
+    ''Handle Find By Date Button Click
     Private Sub ButtonFind_Click(sender As Object, e As RoutedEventArgs) Handles ButtonFind.Click
         viewModel.filterDate(TxtBxDateFrom.Text, TxtBxDateTo.Text)
         summarySalesTotal()
     End Sub
-    'UI Control
-    ''Sales Total UI Format
-    Public Sub summarySalesTotal()
-        TxtBxSum.Text = Format(viewModel.sum, "0.00")
-    End Sub
-    'Handle Generate Report Button Click - UC 002 Generate Report
-    Private Sub ButtonReport_Click(sender As Object, e As RoutedEventArgs) Handles ButtonReport.Click
-        makeReport()
+    ''Handle Get All Sales Button Click
+    Private Sub ButtonSales_Click(sender As Object, e As RoutedEventArgs) Handles ButtonSales.Click
+        viewModel.getAllSalesFromModel
     End Sub
 
     'Sub-fucntion
@@ -46,4 +47,9 @@ Public Class salesPageView
         print.PrintVisual(report, "Sales Report")
         'End If
     End Sub
+    ''Sales Total UI Format
+    Public Sub summarySalesTotal()
+        TxtBxSum.Text = Format(viewModel.sum, "0.00")
+    End Sub
+
 End Class

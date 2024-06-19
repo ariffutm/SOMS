@@ -21,7 +21,6 @@ C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\Views\Receipt.
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\Views\salesPageView.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\Views\salesReport.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\Views\userPageView.g.vb
-C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\Views\Window1.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\Application.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\GeneratedInternalTypeHelper.g.vb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\SOMS_MarkupCompile.cache
@@ -35,7 +34,6 @@ C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\Views\Receipt.
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\Views\salesPageView.baml
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\Views\salesReport.baml
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\Views\userPageView.baml
-C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\Views\Window1.baml
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\SOMS.g.resources
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\SOMS.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\SOMS.AssemblyInfoInputs.cache
