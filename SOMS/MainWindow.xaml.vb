@@ -1,22 +1,22 @@
 ﻿Imports SOMS.ViewModels
 
 Public Class MainWindow
-    Private Sub UserPage_Click(sender As Object, e As RoutedEventArgs)
+    Private Sub userPage_Click(sender As Object, e As RoutedEventArgs) Handles userPage.Click
         Dim userPage As userPageView = New userPageView()
         userPage.Show()
     End Sub
 
-    Private Sub ProfilePage_Click(sender As Object, e As RoutedEventArgs)
+    Private Sub profilePage_Click(sender As Object, e As RoutedEventArgs) Handles profilePage.Click
         Dim profilePage As profilePageView = New profilePageView()
         profilePage.Show()
     End Sub
 
-    Private Sub orderSubsystemPage_Click(sender As Object, e As RoutedEventArgs)
+    Private Sub orderPage_Click(sender As Object, e As RoutedEventArgs) Handles orderPage.Click
         Dim orderSubsystemPage As orderSubsystemPageView = New orderSubsystemPageView()
         orderSubsystemPage.Show()
     End Sub
 
-    Private Sub SalesPage_Click(sender As Object, e As RoutedEventArgs) Handles SalesPage.Click
+    Private Sub salesPage_Click(sender As Object, e As RoutedEventArgs) Handles salesPage.Click
         Dim salesPage As salesPageView = New salesPageView()
         salesPage.Show()
     End Sub

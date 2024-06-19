@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Profile Page" Height="390" Width="530">
 
-    <Grid  Height="350" Width="525" Background="Bisque">
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,5,0,0" x:Name="textBlockHeading" VerticalAlignment="Top" Width="110"  FontSize="17" FontStretch="ExtraCondensed"><Run Language="en-my" Text="Update profile"/><Run Text=":"/></TextBlock>
+    <Grid  Height="350" Width="525" Background="#FF006F44">
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,5,0,0" x:Name="textBlockHeading" VerticalAlignment="Top" Width="110"  FontSize="17" FontStretch="ExtraCondensed" Foreground="Snow"><Run Language="en-my" Text="Update profile"/><Run Text=":"/></TextBlock>
         <Grid Margin="31,0,29,23" Background="White" Height="264" VerticalAlignment="Bottom">
             <Grid.RowDefinitions>
                 <RowDefinition Height="252*" />

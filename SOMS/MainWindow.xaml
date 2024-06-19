@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SOMS"
         mc:Ignorable="d"
         Title="Main Menu" Height="400" Width="550">
-    <Grid  Height="350" Width="525" Background="Bisque">
+    <Grid  Height="350" Width="525" Background="#FF006F44">
 
         <Grid Margin="31,0,29,23" Background="White" Height="264" VerticalAlignment="Bottom">
             <Grid.RowDefinitions>
@@ -15,10 +15,10 @@
             </Grid.RowDefinitions>
             <TextBlock Height="20" HorizontalAlignment="Left" Margin="67,0,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="247"  OpacityMask="Crimson" Foreground="#FFE5572C" />
             <!--For password-->
-            <Button Content="User" Height="23" HorizontalAlignment="Left" Margin="50,204,0,0" Name="UserPage" VerticalAlignment="Top" Width="70" Click="UserPage_Click" />
-            <Button Content="Profile" Height="23" HorizontalAlignment="Left" Margin="150,204,0,0" Name="ProfilePage" VerticalAlignment="Top" Width="70" Click="ProfilePage_Click" />
-            <Button Content="Order" Height="23" HorizontalAlignment="Left" Margin="250,204,0,0" Name="OrderSubsystemPage" VerticalAlignment="Top" Width="70" Click="OrderSubsystemPage_Click" />
-            <Button Content="Sales" Height="23" HorizontalAlignment="Right" Margin="0,204,40,0" Name="SalesPage" VerticalAlignment="Top" Width="70" />
+            <Button Content="User" Height="23" HorizontalAlignment="Center" Margin="0,161,0,0" Name="userPage" VerticalAlignment="Top" Width="70"/>
+            <Button Content="Profile" Height="23" HorizontalAlignment="Left" Margin="75,204,0,0" Name="profilePage" VerticalAlignment="Top" Width="70" />
+            <Button Content="Order" Height="23" HorizontalAlignment="Center" Margin="0,204,0,0" Name="orderPage" VerticalAlignment="Top" Width="70"/>
+            <Button Content="Sales" Height="23" HorizontalAlignment="Right" Margin="0,204,75,0" Name="salesPage" VerticalAlignment="Top" Width="70" />
         </Grid>
     </Grid>
 </Window>
