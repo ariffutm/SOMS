@@ -42,6 +42,7 @@ Namespace ViewModels
                 MessageBox.Show("New user added to the Database")
             End If
             con.Close()
+            getAllUserListFromModel()
         End Sub
 
         'UC013 Delete
@@ -57,6 +58,7 @@ Namespace ViewModels
                     MessageBox.Show("User successfully deleted from the Database")
                     con.Close()
             End Select
+            getAllUserListFromModel()
         End Sub
 
         'UC013 Update
@@ -80,6 +82,7 @@ Namespace ViewModels
             End If
             con.Close()
             Return False
+            getAllUserListFromModel()
         End Function
 
     End Class
