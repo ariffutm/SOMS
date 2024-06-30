@@ -294,7 +294,7 @@ Namespace ViewModels
                         con.Close()
                         updateSalesByOrderIdIntoDatabase(newId, dateIssue)
                     Catch
-                        MessageBox.Show("Error in updating order: updateOrderByIDIntoModel in orderPageViewModel.vb")
+                        MessageBox.Show("Error in updating order details.")
                     End Try
             End Select
 

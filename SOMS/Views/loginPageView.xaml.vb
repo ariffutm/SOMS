@@ -12,7 +12,7 @@ Public Class loginPageView
         ElseIf Lcase(returnloginStatus) = "user" Then
             userTypeUIHandling(returnloginStatus)
         Else
-            errormessage.Text = "Failed login"
+            errormessage.Text = "Failed login. Please contact the administrator."
         End If
     End Sub
 

@@ -17,7 +17,7 @@
             <TextBlock Height="20" HorizontalAlignment="Left" Margin="67,0,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="247"  OpacityMask="Crimson" Foreground="#FFE5572C" />
             <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,20,0,0" x:Name="textBlockFirstname" VerticalAlignment="Top" Width="110" ><Run Language="en-my" Text="Username"/><Run Text=":"/></TextBlock>
             <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,48,0,0" x:Name="textBlockPassword" VerticalAlignment="Top" Width="110"  ><Run Language="en-my" Text="Old "/><Run Text="Password:"/></TextBlock>
-            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,80,0,0" x:Name="textBlockConfirmPwd" VerticalAlignment="Top" Width="110" ><Run Language="en-my" Text="New "/><Run Text="Password:"/></TextBlock>
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,80,0,0" x:Name="textBlockConfirmPwd" VerticalAlignment="Top" Width="110" ><Run Text="New "/><Run Text="Password:"/></TextBlock>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="183,20,0,0" Name="usernameBox" VerticalAlignment="Top" Width="222" />
             <TextBox Height="23" HorizontalAlignment="Left" Margin="183,48,0,0" Name="currentPasswordBox" VerticalAlignment="Top" Width="222" />
             <!--For password-->
@@ -25,6 +25,8 @@
             <Button Content="Update" Height="23" HorizontalAlignment="Left" Margin="183,134,0,0" Name="SendProfileUpdated" VerticalAlignment="Top" Width="70" Click="SendProfileUpdated_Click" />
             <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="259,134,0,0" Name="cancelButton" VerticalAlignment="Top" Width="70" Click="cancelButton_Click" />
             <Button Content="Cancel" Height="23" HorizontalAlignment="Right" Margin="0,134,60,0" Name="button3" VerticalAlignment="Top" Width="70" Visibility="Hidden" />
+            <TextBlock Height="14" HorizontalAlignment="Left" Margin="182,99,0,0" x:Name="textBlockConfirmPwd_Copy" VerticalAlignment="Top" Width="223" FontSize="11" FontWeight="Bold" Text="(Avoid the same as the bank and personal " />
+            <TextBlock Height="14" HorizontalAlignment="Left" Margin="182,114,0,0" x:Name="textBlockConfirmPwd_Copy1" VerticalAlignment="Top" Width="223" FontSize="11" FontWeight="Bold" Text=" password.)" />
         </Grid>
     </Grid>
 </Window>

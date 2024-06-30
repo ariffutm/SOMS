@@ -73,19 +73,23 @@ Namespace ViewModels
         Public Sub addNewItemIntoModel(Id As String, Name As String, Price As String, Description As String, Stock As String)
             Dim sql As String = "INSERT INTO [Item] (Id, itemName, Price, Description, Stock) VALUES (?,?,?,?,?)"
             Dim com = New OleDbCommand(sql, con)
-            If String.IsNullOrEmpty(Id) Then
-                MessageBox.Show("Please fill in the correct ID for the item.")
-            ElseIf DataValidationGood(Id, Name, Price, Description, Stock) Then
-                con.Open()
-                com.Parameters.AddWithValue("@id", Id)
-                com.Parameters.AddWithValue("@username", Name)
-                com.Parameters.AddWithValue("@price", Price)
-                com.Parameters.AddWithValue("@description", Description)
-                com.Parameters.AddWithValue("@stock", Stock)
-                com.ExecuteNonQuery()
-                MessageBox.Show("New item added to the Database")
-                con.Close()
-            End If
+            con.Open()
+            Try
+                If String.IsNullOrEmpty(Id) Then
+                    MessageBox.Show("Please fill in the correct ID for the item.")
+                ElseIf DataValidationGood(Id, Name, Price, Description, Stock) Then
+                    com.Parameters.AddWithValue("@id", Id)
+                    com.Parameters.AddWithValue("@username", Name)
+                    com.Parameters.AddWithValue("@price", Price)
+                    com.Parameters.AddWithValue("@description", Description)
+                    com.Parameters.AddWithValue("@stock", Stock)
+                    com.ExecuteNonQuery()
+                    MessageBox.Show("New item added to the Database")
+                End If
+            Catch
+                MessageBox.Show("Make sure to fill in the correct format details, especially the price.")
+            End Try
+            con.Close()
         End Sub
 
         'UC008 Delete

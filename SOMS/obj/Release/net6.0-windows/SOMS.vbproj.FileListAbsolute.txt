@@ -46,4 +46,3 @@ C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\refint\SOMS.dl
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\SOMS.pdb
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\SOMS.genruntimeconfig.cache
 C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\ref\SOMS.dll
-C:\Users\VICTUS\source\repos\SOMS\SOMS\obj\Release\net6.0-windows\SOMS_Content.g.vb

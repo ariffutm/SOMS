@@ -59,11 +59,11 @@
                    ItemsSource="{Binding itemList}" CanUserAddRows="False" Height="300" Margin="10">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding Path=ID}"  Width="100"  IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}"  Width="100"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}"  Width="150"  IsReadOnly="True"/>
                     <DataGridTextColumn Header="Price (RM)" Binding="{Binding Path=Price}" Width="70"  IsReadOnly="True"/>
                     <DataGridTextColumn Header="Description" Binding="{Binding Path=Description}" Width="300"  IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Stock" Binding="{Binding Path=Stock}" Width="100" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Balance" Binding="{Binding Path=Balance}" Width="100" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Stock" Binding="{Binding Path=Stock}" Width="70" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Balance" Binding="{Binding Path=Balance}" Width="70" IsReadOnly="True"/>
                     <DataGridTemplateColumn Width="50">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
