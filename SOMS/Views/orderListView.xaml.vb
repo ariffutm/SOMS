@@ -73,9 +73,4 @@ Public Class orderListView
     Private Sub ButtonAllOrder_Click(sender As Object, e As RoutedEventArgs) Handles ButtonAllOrder.Click
         viewModel.getOrderListFromModel()
     End Sub
-    'Testing input
-    Private Sub Testing(input As String)
-        MessageBox.Show(input)
-    End Sub
-
 End Class

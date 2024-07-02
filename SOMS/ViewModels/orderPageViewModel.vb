@@ -326,9 +326,9 @@ Namespace ViewModels
                         End With
 
                         Smtp_Server.Send(e_mail)
-                        MessageBox.Show("Mail Sent")
+                        MessageBox.Show("Mail Sent to " + selectedOrder.Email)
                     Catch error_t As Exception
-                        MessageBox.Show("Make sure the internet connection is online.")
+                        MessageBox.Show("Make sure the internet connection is online, or contact admin to verify sender credentials.")
                     End Try
             End Select
         End Sub
