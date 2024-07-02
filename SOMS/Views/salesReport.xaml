@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SOMS"
         mc:Ignorable="d"
-        Title="Sales Report"  Height="550" Width="630">
+        Title="Sales Report"  Height="1050" Width="630">
     <Window.Resources>
         <Style x:Key="TextRight" TargetType="{x:Type TextBlock}" >
             <Setter Property="TextAlignment" Value="Right" />

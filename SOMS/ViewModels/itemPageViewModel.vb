@@ -105,7 +105,7 @@ Namespace ViewModels
                         com.ExecuteNonQuery()
                         MessageBox.Show("Item successfully deleted from the database")
                     Catch
-                        MessageBox.Show("There are orders with this item listed.")
+                        MessageBox.Show("There are orders with this item listed. Fail to delete the item.")
                     End Try
                     con.Close()
             End Select

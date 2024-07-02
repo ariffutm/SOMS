@@ -45,14 +45,4 @@ Public Class itemPageView
             Me.DataContext = seeAllItemList()
         End If
     End Sub
-
-    'Testing
-    Private Sub Testing(input As String)
-        MessageBox.Show(input)
-    End Sub
-
-    'Private Sub ButtonCancel_Click(sender As Object, e As RoutedEventArgs) Handles ButtonCancel.Click
-    '    Dim form As New orderSubsystemPageView
-    '    form.TabControl.SelectedIndex = 1
-    'End Sub
 End Class
