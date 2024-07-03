@@ -1,0 +1,74 @@
+﻿<Window x:Class="userPageView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SOMS"
+        mc:Ignorable="d"
+        Title="Manage User" Height="550" Width="800">
+    <StackPanel Orientation="Vertical">
+        <GroupBox Header="User Form" Margin="10">
+            <Grid Height="150">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Id" HorizontalAlignment="Left" 
+                       VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" x:Name="TextBlockId" Height="27" 
+                         Margin="5"  Width="300" HorizontalAlignment="Left"/>
+                <Label Content="Username" HorizontalAlignment="Left" VerticalContentAlignment="Center" 
+                       Grid.Row="1" Grid.Column="0"/>
+                <TextBox Grid.Row="1" Grid.Column="1" x:Name="TextBoxUsername" Height="27" 
+                       Margin="5,5,0,5" Width="300" HorizontalAlignment="Left"/>
+                <Label Content="Password" HorizontalAlignment="Left" VerticalContentAlignment="Center" 
+                       Grid.Row="2" Grid.Column="0" />
+                <TextBox Grid.Row="2" Grid.Column="1" x:Name="TextBoxPassword" Height="27" 
+                       Margin="5" Width="300" HorizontalAlignment="Left"/>
+                <Label Content="Status" HorizontalAlignment="Left" VerticalContentAlignment="Center" 
+                       Grid.Row="3" Grid.Column="0" />
+                <ComboBox Grid.Row="3" Grid.Column="1" x:Name="TextBoxStatus" Height="27"
+                        Margin="5" Width="300" HorizontalAlignment="Left">
+                    <ComboBoxItem Content="Admin"></ComboBoxItem>
+                    <ComboBoxItem Content="User"></ComboBoxItem>
+                </ComboBox>
+            </Grid>
+        </GroupBox>
+        <StackPanel Height="40" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="ButtonAdd" Content="Add" Height="30" Width="80" Margin="5,0,5,0"/>
+            <Button x:Name="ButtonUpdate" Content="Update" Height="30" Width="80"/>
+            <Button x:Name="ButtonCancel" Content="Cancel" Height="30" Width="80" Margin="5,0,10,0"/>
+        </StackPanel>
+        <StackPanel Height="210">
+            <DataGrid VerticalScrollBarVisibility="Auto" x:Name="DataGridUser" AutoGenerateColumns="False"
+                      ItemsSource="{Binding userList}" CanUserAddRows="False" Height="200" Margin="10">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"  Width="100"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Username" Binding="{Binding Path=Username}" Width="100"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Password" Binding="{Binding Path=Password}" Width="100"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Status" Binding="{Binding Path=Status}" Width="100" IsReadOnly="True"/>
+                    <DataGridTemplateColumn Width="50">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Click="SelectUser" Content="Select" x:Name="ButtonEdit"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Width="50">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button  Click="RemoveUser" Content="Delete" x:Name="ButtonDelete"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </StackPanel>
+</Window>

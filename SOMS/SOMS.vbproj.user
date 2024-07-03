@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\VICTUS\source\repos\SOMS\SOMS\My Project\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="Application.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\itemPageView.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\loginPageView.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\orderListView.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\orderSubsystemPageView.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\profilePageView.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Receipt.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\salesPageView.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\salesReport.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\userPageView.xaml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\itemPageView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\loginPageView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\orderListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\orderSubsystemPageView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\profilePageView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Receipt.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\salesPageView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\salesReport.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\userPageView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
