@@ -5,8 +5,8 @@
         Public Shared userId As New String("0")
 
         'Email Credentials
-        Public Shared credentialEmail As New String("ariffiskandar@graduate.utm.my")
-        Public Shared credentialPassword As New String("B21ec0013@Account")
+        Public Shared credentialEmail As New String("sender@email.com")
+        Public Shared credentialPassword As New String("senderEmailPassword")
         'Dim dbPathAndFilename As New String("Data Source=C:\Users\VICTUS\Documents\SOMS.accdb;")
         'Dim dbPassword As New String("Persist Security Info=True;Jet OLEDB:Database Password =admin")
     End Class
