@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SOMS"
         mc:Ignorable="d"
-        Title="Sales Report"  Height="9999" Width="630">
+        Title="Sales Report"  Height="900" Width="630">
     <Window.Resources>
         <Style x:Key="TextRight" TargetType="{x:Type TextBlock}" >
             <Setter Property="TextAlignment" Value="Right" />
@@ -15,13 +15,13 @@
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Vertical">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="25"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="200"/>
@@ -29,7 +29,7 @@
                     <ColumnDefinition Width="330"/>
                 </Grid.ColumnDefinitions>
                 <!--Receipt-->
-                <Label Content="SALES REPORT" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Width="200" FontSize="19" FontWeight="Bold" FontFamily="Segoe UI Semibold"/>
+                <Label Content="SALES REPORT" HorizontalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Width="200" FontSize="15" FontWeight="Bold" FontFamily="Segoe UI Semibold"/>
             </Grid>
             <!--<Second GroupBox/>-->
             <GroupBox>
@@ -69,7 +69,7 @@
         </StackPanel>
         <!--<Grid Panel/>-->
         <DataGrid Grid.Row="1" VerticalScrollBarVisibility="Auto" x:Name="DataGridSales" AutoGenerateColumns="False"
-        CanUserAddRows="False" Margin="5">
+        CanUserAddRows="False" Margin="1" FontSize="9">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ORDER" Binding="{Binding Path=orderId}"  Width="130"  IsReadOnly="True" FontFamily="Consolas"/>
                 <DataGridTextColumn Header="DATE" Binding="{Binding Path=dateIssued}" Width="100"  IsReadOnly="True" FontFamily="Consolas"/>
